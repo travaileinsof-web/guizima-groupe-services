@@ -35,29 +35,31 @@ export function Reveal({ children, delay = 0, y = 30, className = "", once = tru
  * Reveal text word by word — for headings
  */
 export function RevealWords({ text, className = "", delay = 0 }: { text: string; className?: string; delay?: number }) {
- const ref = useRef<HTMLSpanElement>(null);
- const inView = useInView(ref, { once: true, margin: "-50px" });
- const words = text.split(" ");
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-50px" });
+  const words = text.split(" ");
 
- return (
- <span ref={ref} className={className}>
- {words.map((word, i) => (
- <span key={i} className="reveal-mask">
- <motion.span
- className="inline-block"
- initial={{ y: "100%" }}
- animate={inView ? { y: "0%" } : { y: "100%" }}
- transition={{
- duration: 0.8,
- delay: delay + i * 0.08,
- ease: [0.16, 1, 0.3, 1],
- }}
- >
- {word}
- {i < words.length - 1 ? "\u00A0" : ""}
- </motion.span>
- </span>
- ))}
- </span>
- );
+  return (
+    /* key={text} force React à démonter/remonter le composant dès que le texte change */
+    <span key={text} ref={ref} className={className}>
+      {words.map((word, i) => (
+        /* Clé unique basée sur le mot et l'index */
+        <span key={`${word}-${i}`} className="reveal-mask">
+          <motion.span
+            className="inline-block"
+            initial={{ y: "100%" }}
+            animate={inView ? { y: "0%" } : { y: "100%" }}
+            transition={{
+              duration: 0.8,
+              delay: delay + i * 0.08,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+          >
+            {word}
+            {i < words.length - 1 ? "\u00A0" : ""}
+          </motion.span>
+        </span>
+      ))}
+    </span>
+  );
 }

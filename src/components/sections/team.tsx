@@ -10,6 +10,7 @@ import { useFetch } from "@/hooks/use-fetch";
 interface ApiTeamMember {
   id: string;
   name: string;
+  nameEn: string | null;
   role: string;
   roleEn: string | null;
   expertise: string;
@@ -62,6 +63,7 @@ export function Team() {
               const role = lang === "fr" ? m.role : (m.roleEn || m.role);
               const expertise = lang === "fr" ? m.expertise : (m.expertiseEn || m.expertise);
               const bio = lang === "fr" ? m.bio : (m.bioEn || m.bio);
+              const name = lang === "fr" ? m.name : (m.nameEn || m.name);
               return (
                 <Reveal key={m.id} delay={(i % 3) * 0.08}>
                   <article className="group relative overflow-hidden rounded-2xl border border-obsidian/10 bg-white shadow-sm card-lift">
@@ -102,7 +104,7 @@ export function Team() {
                     </div>
                     <div className="p-6">
                       <div className="text-[10px] uppercase tracking-[0.2em] text-emerald font-medium">{role}</div>
-                      <h3 className="mt-2 font-display text-xl font-bold text-obsidian">{m.name}</h3>
+                      <h3 className="mt-2 font-display text-xl font-bold text-obsidian">{name}</h3>
                       <p className="mt-2 text-xs text-graphite/70">{expertise}</p>
                       {bio && (
                         <p className={`mt-3 text-xs leading-relaxed text-graphite/70 ${expanded === m.id ? "" : "line-clamp-2"}`}>

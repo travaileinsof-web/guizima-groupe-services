@@ -54,9 +54,9 @@ function AdminLayoutInner({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="min-h-screen bg-obsidian">
+     <div className="min-h-screen bg-obsidian">
       <AdminSidebar counts={counts} />
-      <main className="ml-64 min-h-screen p-8">
+      <main className="min-h-screen p-4 pt-20 lg:ml-64 lg:p-8 lg:pt-8">
         {children}
       </main>
     </div>
