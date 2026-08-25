@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
@@ -51,11 +51,6 @@ export function AdminSidebar({ counts }: { counts?: Record<string, number> }) {
   const { logout } = useAdminAuth();
   const [isOpen, setIsOpen] = useState(false);
 
-  // Ferme automatiquement le panneau mobile à chaque changement de page
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
-
   const handleLogout = async () => {
     await logout();
     router.push("/admin/login");
@@ -65,7 +60,7 @@ export function AdminSidebar({ counts }: { counts?: Record<string, number> }) {
     <>
       {/* Barre mobile fixe : logo + hamburger/X (masquée en desktop) */}
       <div className="fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between border-b border-border bg-coal px-4 lg:hidden">
-        <Link href="/admin" className="inline-block">
+        <Link href="/admin" className="inline-block" onClick={() => setIsOpen(false)}>
           <Logo size={28} />
         </Link>
         <button
@@ -118,6 +113,7 @@ export function AdminSidebar({ counts }: { counts?: Record<string, number> }) {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => setIsOpen(false)}
                 className={cn(
                   "group mb-1 flex items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors",
                   isActive
