@@ -39,7 +39,7 @@
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
 
-  /* IREX Mining brand palette */
+  /* Guizima Group Services brand palette */
   --color-obsidian: var(--obsidian);
   --color-coal: var(--coal);
   --color-graphite: var(--graphite);
@@ -62,60 +62,60 @@
 }
 
 /* ============================================
-   IREX MINING — Premium Palette v2
-   Black + Gold + Green + White/Ivory
-   ============================================ */
+  GUIZIMA GROUP SERVICES — Premium Palette
+  Midnight blue + signal red + white
+  ============================================ */
 :root {
   --radius: 0.5rem;
 
   /* Brand colors */
-  --obsidian: #0a0a0b;
-  --coal: #14141a;
-  --graphite: #1f1f26;
-  --gold: #d4a547;
-  --gold-bright: #f5c842;
-  --gold-light: #e8c87a;
-  --copper: #b8612c;
-  --copper-light: #c97b4e;
-  --emerald-deep: #1a4d3a;
-  --emerald: #2d7a5f;
-  --emerald-light: #4ca884;
-  --ivory: #faf7f0;
-  --bone: #f0ead9;
-  --cream: #f5f0e1;
+  --obsidian: #071426;
+  --coal: #0d2340;
+  --graphite: #183352;
+  --gold: #e3293f;
+  --gold-bright: #ff5364;
+  --gold-light: #ff9ba6;
+  --copper: #b91630;
+  --copper-light: #e33e50;
+  --emerald-deep: #073a72;
+  --emerald: #0b62b5;
+  --emerald-light: #4a9be2;
+  --ivory: #ffffff;
+  --bone: #e9f1f8;
+  --cream: #f4f8fc;
 
   /* Shadcn semantic — DARK theme by default */
-  --background: #0a0a0b;
-  --foreground: #faf7f0;
-  --card: #14141a;
-  --card-foreground: #faf7f0;
-  --popover: #14141a;
-  --popover-foreground: #faf7f0;
-  --primary: #d4a547;
-  --primary-foreground: #0a0a0b;
-  --secondary: #1f1f26;
-  --secondary-foreground: #faf7f0;
-  --muted: #1f1f26;
-  --muted-foreground: #8b8680;
-  --accent: #2d7a5f;
-  --accent-foreground: #faf7f0;
-  --destructive: #c53030;
-  --border: #2a2a30;
-  --input: #2a2a30;
-  --ring: #d4a547;
-  --chart-1: #d4a547;
-  --chart-2: #2d7a5f;
-  --chart-3: #b8612c;
-  --chart-4: #f5c842;
-  --chart-5: #4ca884;
-  --sidebar: #0a0a0b;
-  --sidebar-foreground: #faf7f0;
-  --sidebar-primary: #d4a547;
-  --sidebar-primary-foreground: #0a0a0b;
-  --sidebar-accent: #1f1f26;
-  --sidebar-accent-foreground: #faf7f0;
-  --sidebar-border: #2a2a30;
-  --sidebar-ring: #d4a547;
+  --background: #071426;
+  --foreground: #ffffff;
+  --card: #0d2340;
+  --card-foreground: #ffffff;
+  --popover: #0d2340;
+  --popover-foreground: #ffffff;
+  --primary: #e3293f;
+  --primary-foreground: #ffffff;
+  --secondary: #183352;
+  --secondary-foreground: #ffffff;
+  --muted: #183352;
+  --muted-foreground: #a9bfd4;
+  --accent: #0b62b5;
+  --accent-foreground: #ffffff;
+  --destructive: #ff5364;
+  --border: #234668;
+  --input: #234668;
+  --ring: #e3293f;
+  --chart-1: #e3293f;
+  --chart-2: #0b62b5;
+  --chart-3: #ff5364;
+  --chart-4: #4a9be2;
+  --chart-5: #a9bfd4;
+  --sidebar: #071426;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #e3293f;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #183352;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #234668;
+  --sidebar-ring: #e3293f;
 }
 
 @layer base {
@@ -156,7 +156,7 @@
     background: var(--coal);
   }
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--gold), var(--copper));
+    background: linear-gradient(180deg, var(--gold), var(--emerald));
     border-radius: 5px;
     border: 2px solid var(--coal);
   }
@@ -171,7 +171,7 @@
 
 /* Gradient text */
 .text-gradient-gold {
-  background: linear-gradient(135deg, #f5c842 0%, #d4a547 50%, #b8612c 100%);
+  background: linear-gradient(135deg, #ff5364 0%, #e3293f 50%, #0b62b5 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -180,7 +180,7 @@
 }
 
 .text-gradient-emerald {
-  background: linear-gradient(135deg, #4ca884 0%, #2d7a5f 50%, #1a4d3a 100%);
+  background: linear-gradient(135deg, #4a9be2 0%, #0b62b5 50%, #073a72 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -189,14 +189,14 @@
 }
 
 .text-gradient-ivory {
-  background: linear-gradient(180deg, #faf7f0 0%, #c5bfae 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #a9bfd4 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-dark {
-  background: linear-gradient(135deg, #0a0a0b 0%, #2d7a5f 50%, #0a0a0b 100%);
+  background: linear-gradient(135deg, #071426 0%, #0b62b5 50%, #071426 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

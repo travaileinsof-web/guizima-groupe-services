@@ -21,7 +21,7 @@ export function Testimonials() {
  {/* Background image with overlay */}
  <img
  src={testimonialBg}
- alt="Mining operations"
+ alt="Guizima Group Services operations"
  loading="lazy" decoding="async"
  className="absolute inset-0 w-full h-full object-cover opacity-15"
  />
@@ -37,7 +37,7 @@ export function Testimonials() {
  <div className="mb-16 text-center">
  <span
  className="badge-premium mb-6 mx-auto"
- style={{ background: "rgba(245,200,66,0.15)", borderColor: "rgba(245,200,66,0.4)", color: "#f5c842" }}
+ style={{ background: "rgba(227,41,63,0.15)", borderColor: "rgba(227,41,63,0.4)", color: "#ff5364" }}
  >
  {c.tag}
  </span>

@@ -183,7 +183,7 @@ async function main() {
     create: {
       id: "contact-info-single",
       address: "Matoto Centre, Commune Urbaine de Matoto\nConakry",
-      phones: "626 68 32 32",
+      phones: "224 624 56 72 72",
       emails: "irexmine1@outlook.com",
       hours: "Lun – Ven : 08h00 — 18h00\nSam : 09h00 — 13h00",
       hoursEn: "Mon – Fri: 8:00 AM — 6:00 PM\nSat: 9:00 AM — 1:00 PM",

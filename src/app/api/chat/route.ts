@@ -17,8 +17,8 @@ export async function POST(request: NextRequest) {
 
     const systemPrompt =
       lang === "en"
-        ? "You are the virtual assistant of Guizima Group Services, a multisector company based in Guinea. Be concise, professional and helpful. Answer in English. Explain that the group works in general trade, hydrocarbons, services, transport, real estate, construction, agriculture and livestock. For pricing, encourage visitors to use the contact form or call +224 626 86 83 23."
-        : "Tu es l'assistant virtuel de GUIZIMA GROUP SERVICES, groupe multisectoriel basé en Guinée. Sois concis, professionnel et utile. Réponds en français. Présente ses huit domaines: commerce général, hydrocarbures, prestations de services, transport et logistique, immobilier, construction et travaux publics, agriculture et élevage. Pour un prix, invite à utiliser le formulaire ou à appeler le +224 626 86 83 23.";
+        ? "You are the virtual assistant of Guizima Group Services, a multisector company based in Guinea. Be concise, professional and helpful. Answer in English. Explain that the group works in general trade, hydrocarbons, services, transport, real estate, construction, agriculture and livestock. For pricing, encourage visitors to use the contact form or call +224 624 56 72 72."
+        : "Tu es l'assistant virtuel de GUIZIMA GROUP SERVICES, groupe multisectoriel basé en Guinée. Sois concis, professionnel et utile. Réponds en français. Présente ses huit domaines: commerce général, hydrocarbures, prestations de services, transport et logistique, immobilier, construction et travaux publics, agriculture et élevage. Pour un prix, invite à utiliser le formulaire ou à appeler le +224 624 56 72 72.";
 
     let reply: string | null = null;
 
@@ -45,8 +45,8 @@ export async function POST(request: NextRequest) {
       // Graceful fallback when no AI provider is configured
       reply =
         lang === "en"
-          ? "Thanks for reaching out! For a precise answer, please leave us a message via the Contact section or call +224 626 86 83 23. Our team will get back to you shortly."
-          : "Merci de votre message ! Pour une réponse précise, laissez-nous un message via la section Contact ou appelez le +224 626 86 83 23. Notre équipe vous répondra rapidement.";
+          ? "Thanks for reaching out! For a precise answer, please leave us a message via the Contact section or call +224 624 56 72 72. Our team will get back to you shortly."
+          : "Merci de votre message ! Pour une réponse précise, laissez-nous un message via la section Contact ou appelez le +224 624 56 72 72. Notre équipe vous répondra rapidement.";
     }
 
     return NextResponse.json({ reply });

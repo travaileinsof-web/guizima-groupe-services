@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 interface RevealProps {
@@ -12,22 +12,41 @@ interface RevealProps {
 }
 
 /**
- * Generic scroll reveal wrapper — fade up + translate
+ * Generic scroll reveal wrapper — CSS animation triggered by IntersectionObserver.
+ * Framer Motion remains reserved for the word-level heading animation below.
  */
 export function Reveal({ children, delay = 0, y = 30, className = "", once = true }: RevealProps) {
  const ref = useRef<HTMLDivElement>(null);
- const inView = useInView(ref, { once, margin: "-80px" });
+ const [inView, setInView] = useState(false);
+
+ useEffect(() => {
+   const element = ref.current;
+   if (!element) return;
+
+   const observer = new IntersectionObserver(
+     ([entry]) => {
+       if (entry.isIntersecting) {
+         setInView(true);
+         if (once) observer.unobserve(element);
+       } else if (!once) {
+         setInView(false);
+       }
+     },
+     { rootMargin: "-80px 0px" }
+   );
+
+   observer.observe(element);
+   return () => observer.disconnect();
+ }, [once]);
 
  return (
- <motion.div
+ <div
  ref={ref}
- initial={{ opacity: 0, y }}
- animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y }}
- transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
- className={className}
+ style={{ "--reveal-y": `${y}px`, animationDelay: `${delay}s` } as React.CSSProperties}
+ className={`${className} ${inView ? "animate-in fade-in slide-in-from-bottom-6 duration-700" : "translate-y-[var(--reveal-y)] opacity-0"}`}
  >
  {children}
- </motion.div>
+ </div>
  );
 }
 

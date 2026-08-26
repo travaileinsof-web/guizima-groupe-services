@@ -33,7 +33,7 @@ export function CtaBanner() {
 
  <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-10">
  <Reveal>
- <span className="badge-premium mb-6 mx-auto" style={{ background: "rgba(245,200,66,0.15)", borderColor: "rgba(245,200,66,0.4)", color: "#f5c842" }}>
+ <span className="badge-premium mb-6 mx-auto" style={{ background: "rgba(227,41,63,0.15)", borderColor: "rgba(227,41,63,0.4)", color: "#ff5364" }}>
  {lang === "fr" ? "Démarrons ensemble" : "Let's start together"}
  </span>
  </Reveal>
@@ -41,13 +41,13 @@ export function CtaBanner() {
  <h2 className="font-display text-4xl font-bold leading-tight text-ivory md:text-5xl lg:text-6xl">
  {lang === "fr" ? (
  <>
- Transformez vos projets miniers en{" "}
- <span className="text-gradient-gold">succès durables</span>
+ Donnez à vos projets l'élan qu'ils méritent{" "}
+ <span className="text-gradient-gold">avec Guizima</span>
  </>
  ) : (
  <>
- Turn your mining projects into{" "}
- <span className="text-gradient-gold">sustainable successes</span>
+ Give your projects the momentum they need{" "}
+ <span className="text-gradient-gold">with Guizima</span>
  </>
  )}
  </h2>
@@ -55,8 +55,8 @@ export function CtaBanner() {
  <Reveal delay={0.2}>
  <p className="mx-auto mt-6 max-w-2xl text-base text-ivory/80 md:text-lg">
  {lang === "fr"
- ? "Notre équipe d'experts vous accompagne de l'exploration à l'exploitation, avec excellence, sécurité et responsabilité."
- : "Our team of experts supports you from exploration to operations, with excellence, safety and responsibility."}
+ ? "Du besoin initial à la réalisation, notre équipe vous accompagne avec méthode, réactivité et engagement."
+ : "From the first need to delivery, our team supports you with method, responsiveness and commitment."}
  </p>
  </Reveal>
  <Reveal delay={0.3}>
@@ -70,12 +70,12 @@ export function CtaBanner() {
  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
  </button>
  <a
- href="tel:+224626868323"
+ href="tel:+224624567272"
  data-cursor="hover"
  className="group inline-flex items-center gap-2 rounded-full border border-ivory/40 px-7 py-3.5 text-sm font-medium text-ivory transition-all hover:border-gold hover:bg-gold/10 hover:text-gold"
  >
  <Phone className="h-4 w-4" />
- +224 626 86 83 23
+ +224 624 56 72 72
  </a>
  </div>
  </Reveal>

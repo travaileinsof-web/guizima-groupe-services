@@ -120,7 +120,7 @@ export function Contact() {
               <div className="relative mt-2 h-72 overflow-hidden rounded-2xl border border-obsidian/10 shadow-sm">
                 <iframe
                   src={mapUrl}
-                  title="IREX Mining — Matoto Centre, Conakry"
+                  title="Guizima Group Services — Conakry"
                   className="absolute inset-0 w-full h-full"
                   style={{ border: 0 }}
                   loading="lazy"

@@ -73,6 +73,8 @@ export function Hero() {
  <div className="absolute inset-0 bg-gradient-to-b from-obsidian/70 via-obsidian/60 to-obsidian" />
  <div className="absolute inset-0 bg-gradient-to-r from-obsidian/80 via-transparent to-obsidian/40" />
  <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212, 165, 71, 0.18), transparent 70%)" }} />
+ <div className="absolute right-[8%] top-[18%] h-52 w-52 rotate-45 border border-gold/30 [clip-path:polygon(50%_0,100%_50%,50%_100%,0_50%)]" />
+ <div className="absolute right-[13%] top-[23%] h-40 w-40 -rotate-12 border border-emerald-light/30 [clip-path:polygon(50%_0,100%_50%,50%_100%,0_50%)]" />
 
  {/* CSS-animated gradient blobs (replaced Framer Motion) */}
  <div
@@ -107,7 +109,7 @@ export function Hero() {
  <div className="flex flex-col items-center gap-4">
  <div className="h-20 w-px bg-gradient-to-b from-transparent to-gold/40" />
  <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-ivory/70 [writing-mode:vertical-rl]">
- Est. 2024 — Guinea
+ GUZ / CONAKRY
  </span>
  <div className="h-20 w-px bg-gradient-to-t from-transparent to-gold/40" />
  </div>
@@ -117,7 +119,7 @@ export function Hero() {
  <div className="flex flex-col items-center gap-4">
  <div className="h-20 w-px bg-gradient-to-b from-transparent to-emerald/40" />
  <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-ivory/70 [writing-mode:vertical-rl]">
- PRD-35BF1B52BE0E
+ MULTI-SECTOR / 01
  </span>
  <div className="h-20 w-px bg-gradient-to-t from-transparent to-emerald/40" />
  </div>
@@ -126,7 +128,7 @@ export function Hero() {
  {/* Main content — single parallax transform */}
  <motion.div
  style={{ y: contentY, opacity: contentOpacity }}
- className="relative z-10 mx-auto flex min-h-screen max-w-[1400px] flex-col items-center justify-center px-6 py-32 text-center lg:px-10"
+ className="relative z-10 mx-auto flex min-h-screen max-w-[1400px] flex-col items-start justify-center px-6 py-32 text-left lg:px-10 lg:pr-[34rem]"
  >
  {/* Badge */}
  <motion.div
@@ -177,7 +179,7 @@ export function Hero() {
  initial={{ opacity: 0, y: 20 }}
  animate={{ opacity: 1, y: 0 }}
  transition={{ duration: 0.8, delay: 1.8 }}
- className="mt-12 flex flex-col items-center gap-4 sm:flex-row"
+ className="mt-12 flex flex-col items-start gap-4 sm:flex-row"
  >
  <MagneticButton variant="primary" onClick={() => setSection("services")}>
  {c.primaryCta}
@@ -194,10 +196,10 @@ export function Hero() {
  initial={{ opacity: 0, y: 30 }}
  animate={{ opacity: 1, y: 0 }}
  transition={{ duration: 0.8, delay: 2.2 }}
- className="mt-20 grid w-full max-w-4xl grid-cols-2 gap-8 border-t border-gold/20 pt-12 md:grid-cols-4"
+ className="mt-20 grid w-full max-w-3xl grid-cols-2 gap-6 border-t border-gold/30 pt-8 md:grid-cols-4"
  >
  {c.stats.map((stat, i) => (
- <div key={i} className="text-center">
+ <div key={i} className="text-left">
  <div className="font-display text-4xl font-bold text-ivory md:text-5xl stat-glow">
  <AnimatedCounter to={stat.value} suffix={stat.suffix} />
  </div>

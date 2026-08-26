@@ -129,7 +129,7 @@ export function Footer() {
             {/* Contact info */}
             <div className="mt-6 space-y-3 text-sm">
               <div className="flex flex-col gap-2">
-                {(info?.phones?.length ? info.phones : ["+224 626 86 83 23"]).map((phone, i) => (
+                {(info?.phones?.length ? info.phones : ["+224 624 56 72 72"]).map((phone, i) => (
                   <a key={i} href={`tel:${phone.replace(/\s+/g, '').replace(/\+/g, '')}`} className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors" data-cursor="hover">
                     <Phone className="h-3.5 w-3.5" />
                     {phone}

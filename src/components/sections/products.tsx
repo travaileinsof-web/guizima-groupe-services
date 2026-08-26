@@ -139,7 +139,7 @@ export function Products({ onSelectProduct }: { onSelectProduct?: (p: ApiProduct
                       />
                     ) : (
                       <div className="absolute inset-0 bg-gradient-to-br from-graphite to-coal flex items-center justify-center">
-                        <span className="font-display text-5xl font-bold text-gold/20">IREX</span>
+                         <span className="font-display text-5xl font-bold text-gold/20">GUZ</span>
                       </div>
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-obsidian/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

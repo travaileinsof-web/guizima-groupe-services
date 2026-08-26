@@ -39,7 +39,7 @@ export function About() {
  <div className="mt-8 relative overflow-hidden rounded-3xl img-zoom h-72 shadow-2xl">
  <img
  src={aboutImage}
- alt="IREX Mining operations"
+ alt="Guizima Group Services operations"
  loading="lazy" decoding="async"
  className="absolute inset-0 w-full h-full object-cover"
  />
@@ -49,7 +49,7 @@ export function About() {
  <Gem className="h-4 w-4 text-obsidian" />
  </div>
  <div className="text-ivory">
- <div className="text-[10px] uppercase tracking-wider opacity-80">IREX Mining</div>
+ <div className="text-[10px] uppercase tracking-wider opacity-80">Guizima Group Services</div>
  <div className="text-sm font-semibold">Conakry, Guinea</div>
  </div>
  </div>
@@ -71,10 +71,10 @@ export function About() {
  <Reveal delay={0.5}>
  <div className="mt-8 grid grid-cols-2 gap-3">
  {[
- "Exploration & Exploitation",
- "HSE Standards Internationaux",
- "Formation & Capacités",
- "Développement Durable",
+ "Commerce & approvisionnement",
+ "Transport & logistique",
+ "Construction & immobilier",
+ "Agriculture & élevage",
  ].map((item, i) => (
  <div key={i} className="flex items-center gap-2 text-sm text-graphite">
  <CheckCircle2 className="h-4 w-4 text-emerald flex-shrink-0" />

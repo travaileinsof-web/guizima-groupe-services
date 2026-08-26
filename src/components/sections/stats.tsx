@@ -43,7 +43,7 @@ export function Stats() {
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10">
         <Reveal>
           <div className="mb-16 text-center">
-            <span className="badge-premium mb-6 mx-auto" style={{ background: "rgba(245,200,66,0.15)", borderColor: "rgba(245,200,66,0.4)", color: "#f5c842" }}>
+            <span className="badge-premium mb-6 mx-auto" style={{ background: "rgba(227,41,63,0.15)", borderColor: "rgba(227,41,63,0.4)", color: "#ff5364" }}>
               {c.tag}
             </span>
             <h2 className="font-display text-4xl font-bold text-ivory md:text-5xl lg:text-6xl glow-text-gold">

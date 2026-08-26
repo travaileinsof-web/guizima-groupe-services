@@ -280,7 +280,7 @@ export const content = {
       },
       info: {
         address: "Matoto Centre, Commune Urbaine de Matoto\nConakry",
-        phone: "+224 626 86 83 23",
+        phone: "+224 624 56 72 72",
         email: "contact@guizimagroup.com",
         hours: "Lun – Ven : 08h00 — 18h00\nSam : 09h00 — 13h00",
       },
@@ -310,7 +310,7 @@ export const content = {
       placeholder: "Tapez votre message...",
       quick: ["Vos services ?", "Demander un devis", "Nous contacter", "Nos formations"],
       response:
-        "Merci pour votre message ! Notre équipe vous recontactera rapidement. Appelez le +224 626 86 83 23 ou écrivez à contact@guizimagroup.com.",
+        "Merci pour votre message ! Notre équipe vous recontactera rapidement. Appelez le +224 624 56 72 72 ou écrivez à contact@guizimagroup.com.",
     },
     common: {
       learnMore: "En savoir plus",
