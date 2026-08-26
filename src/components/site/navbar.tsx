@@ -93,7 +93,7 @@ export function Navbar() {
             onClick={() => go("home")}
             className="group flex origin-left scale-[0.78] items-center transition-transform hover:scale-[0.82] sm:scale-100 sm:hover:scale-105"
             data-cursor="hover"
-            aria-label="IREX Mining — Home"
+            aria-label="Guizima Group Services — Accueil"
           >
             <Logo size={50} />
           </button>

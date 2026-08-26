@@ -9,6 +9,7 @@ import { AnimatedCounter } from "@/components/site/animated-counter";
 import { RevealWords } from "@/components/site/reveal";
 import { MagneticButton } from "@/components/site/magnetic-button";
 import { heroImages } from "@/lib/images";
+import { GuizimaOrbit } from "@/components/site/guizima-orbit";
 
 /** Deterministic seeded random — same values on server & client */
 function seededRandom(seed: number) {
@@ -63,7 +64,7 @@ export function Hero() {
  <div className="absolute inset-0 overflow-hidden">
  <img
  src={heroImages.primary}
- alt="Industrial mining operation at sunset"
+	alt="Guizima Group Services industrial operation"
  className="absolute inset-0 w-full h-full object-cover animate-ken-burns gpu"
  />
  </div>
@@ -111,6 +112,7 @@ export function Hero() {
  <div className="h-20 w-px bg-gradient-to-t from-transparent to-gold/40" />
  </div>
  </div>
+ <GuizimaOrbit />
  <div className="absolute right-6 top-1/2 hidden -translate-y-1/2 lg:block">
  <div className="flex flex-col items-center gap-4">
  <div className="h-20 w-px bg-gradient-to-b from-transparent to-emerald/40" />

@@ -6,7 +6,7 @@ import { useSiteStore } from "@/lib/store";
 import { Logo } from "@/components/site/logo";
 
 /**
- * Premium page loader — animated IREX logo + progress bar
+ * Premium page loader — animated Guizima logo + progress bar
  */
 export function PageLoader() {
  const isLoaded = useSiteStore((s) => s.isLoaded);
@@ -63,9 +63,9 @@ export function PageLoader() {
  transition={{ duration: 0.6, delay: 0.2 }}
  className="text-center"
  >
- <h1 className="font-display text-2xl font-bold tracking-[0.3em] text-ivory">IREX MINING</h1>
+ <h1 className="font-display text-2xl font-bold tracking-[0.3em] text-ivory">GUIZIMA</h1>
  <p className="mt-2 text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
- Ingénierie Minière
+ GROUP SERVICES
  </p>
  </motion.div>
 

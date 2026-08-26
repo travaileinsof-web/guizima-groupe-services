@@ -23,25 +23,25 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IREX Mining — Ingénierie Minière d'Excellence | Guinea",
-  description: "IREX MINING SARL — Solutions d'ingénierie minière innovantes, durables et responsables. Exploration, exploitation, HSE, logistique, maintenance et renforcement des capacités en République de Guinée.",
-  keywords: ["IREX Mining", "ingénierie minière", "Guinée", "Conakry", "exploration minière", "HSE", "mines", "industrie minière", "consulting minier", "Afrique de l'Ouest"],
-  authors: [{ name: "IREX Mining" }],
+  title: "GUIZIMA GROUP SERVICES — Solutions intégrées | Guinée",
+  description: "GUIZIMA GROUP SERVICES accompagne les entreprises et institutions en commerce général, hydrocarbures, services, transport, immobilier, construction, agriculture et élevage.",
+  keywords: ["Guizima Group Services", "commerce général", "hydrocarbures", "transport", "logistique", "construction", "agriculture", "élevage", "Guinée"],
+  authors: [{ name: "GUIZIMA GROUP SERVICES" }],
   icons: {
     icon: "/logo.png",
   },
   openGraph: {
-    title: "IREX Mining — Ingénierie Minière d'Excellence",
-    description: "Solutions d'ingénierie minière innovantes, durables et responsables en République de Guinée.",
-    url: "https://www.irexmining.com",
-    siteName: "IREX Mining",
+    title: "GUIZIMA GROUP SERVICES — Une force, plusieurs métiers",
+    description: "Un partenaire guinéen pour construire, approvisionner, transporter et développer durablement.",
+    url: "https://www.guizimagroup.com",
+    siteName: "GUIZIMA GROUP SERVICES",
     type: "website",
     locale: "fr_GN",
   },
   twitter: {
     card: "summary_large_image",
-    title: "IREX Mining — Ingénierie Minière d'Excellence",
-    description: "Solutions d'ingénierie minière innovantes, durables et responsables en République de Guinée.",
+    title: "GUIZIMA GROUP SERVICES — Une force, plusieurs métiers",
+    description: "Commerce, hydrocarbures, transport, immobilier, construction, agriculture et élevage en Guinée.",
   },
 };
 

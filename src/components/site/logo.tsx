@@ -8,11 +8,28 @@ type LogoProps = {
 
 export function Logo({ className = "", size = 40, variant = "full" }: LogoProps) {
   return (
-    <img 
-      src="/logo.png" 
-      alt="IREX Mining logo" 
-      className={cn("brightness-0 invert drop-shadow-md", className)} 
-      style={{ height: size, width: 'auto', objectFit: 'contain' }} 
-    />
+    <span
+      className={cn("flex items-center gap-2 text-left text-ivory drop-shadow-md", className)}
+      style={{ height: size }}
+      role="img"
+      aria-label="Guizima Group Services logo"
+    >
+      <span
+        className="flex aspect-square items-center justify-center border border-gold/70 bg-gold font-display font-black text-obsidian"
+        style={{ height: size * 0.82, fontSize: size * 0.34 }}
+      >
+        G
+      </span>
+      {variant !== "mark" && (
+        <span className="flex flex-col justify-center leading-none">
+          <span className="font-display font-bold tracking-[0.08em]" style={{ fontSize: size * 0.28 }}>
+            GUIZIMA
+          </span>
+          <span className="mt-1 font-mono uppercase tracking-[0.18em] text-gold" style={{ fontSize: size * 0.12 }}>
+            Group Services
+          </span>
+        </span>
+      )}
+    </span>
   );
 }

@@ -120,7 +120,7 @@ export function Footer() {
         <div className="grid gap-12 pb-16 lg:grid-cols-[1.5fr_2fr_1fr]">
           {/* Brand */}
           <div>
-            <button onClick={() => go("home")} className="group flex items-center transition-transform hover:scale-105" aria-label="IREX Mining — Home">
+            <button onClick={() => go("home")} className="group flex items-center transition-transform hover:scale-105" aria-label="Guizima Group Services — Accueil">
               <Logo size={40} />
             </button>
             <p className="mt-2 font-display text-sm font-medium text-gold">{c.tagline}</p>
@@ -138,7 +138,7 @@ export function Footer() {
               </div>
               
               <div className="flex flex-col gap-2">
-                {(info?.emails?.length ? info.emails : ["irexmine1@outlook.com"]).map((email, i) => (
+                {(info?.emails?.length ? info.emails : ["contact@guizimagroup.com"]).map((email, i) => (
                   <a key={i} href={`mailto:${email}`} className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors" data-cursor="hover">
                     <Mail className="h-3.5 w-3.5" />
                     {email}
@@ -236,7 +236,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-border py-6 md:flex-row">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} IREX Mining. {c.rights}
+            © {new Date().getFullYear()} GUIZIMA GROUP SERVICES. {c.rights}
           </p>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             {c.legal.map((l, i) => (

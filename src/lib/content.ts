@@ -1,5 +1,5 @@
 /**
- * IREX Mining — Site content & i18n
+ * Guizima Group Services — Site content & i18n
  * Bilingual content (FR / EN) for all sections
  */
 
@@ -25,110 +25,110 @@ export const content = {
       home: "Accueil",
       about: "À Propos",
       services: "Services",
-      products: "Boutique",
-      projects: "Projets",
-      team: "Équipe",
-      blog: "Blog",
+      products: "Solutions",
+      projects: "Réalisations",
+      team: "Le Groupe",
+      blog: "Actualités",
       events: "Événements",
-      careers: "Recrutement",
-      donations: "Dons",
+      careers: "Carrières",
+      donations: "Engagement",
       faq: "FAQ",
       contact: "Contact",
       cta: "Demander un Devis",
     },
     hero: {
-      badge: "Ingénierie Minière",
-      title1: "L'Excellence",
-      title2: "Minière",
-      title3: "Façonnée pour l'Avenir",
+      badge: "GUIZIMA GROUP SERVICES / GUINÉE",
+      title1: "Une force,",
+      title2: "plusieurs métiers.",
+      title3: "Un même niveau d'exigence.",
       subtitle:
-        "Notre engagement est d'aider nos partenaires à améliorer leurs performances, à maîtriser leurs risques et à réaliser des projets durables, conformes aux meilleures pratiques et normes internationales et locales.",
-      primaryCta: "Découvrir nos Services",
-      secondaryCta: "Nos Réalisations",
+        "Du commerce général aux travaux publics, Guizima Group Services met en mouvement les projets qui font avancer la Guinée.",
+      primaryCta: "Explorer nos domaines",
+      secondaryCta: "Voir nos réalisations",
       stats: [
-        { value: 12, suffix: "+", label: "Domaines d'Expertise" },
-        { value: 7, suffix: "", label: "Catégories Produits" },
-        { value: 100, suffix: "%", label: "Engagement HSE" },
-        { value: 5, suffix: "", label: "Emails Professionnels" },
+        { value: 8, suffix: "", label: "Domaines d'activité" },
+        { value: 1, suffix: "", label: "Groupe intégré" },
+        { value: 100, suffix: "%", label: "Engagement qualité" },
+        { value: 24, suffix: "/7", label: "Esprit de service" },
       ],
     },
     about: {
-      tag: "À Propos d'IREX Mining",
-      title: "Un partenaire stratégique de confiance pour le secteur minier",
-      lead: "IREX MINING SARL est une société créée pour promouvoir le développement durable et intégré à travers des services spécialisés en ingénierie, construction, recherche, expertise, consultation, investigation et formation professionnelle au profit des secteurs public, privé et mixte.",
+      tag: "À propos de Guizima",
+      title: "Un groupe intégré au service des ambitions guinéennes",
+      lead: "GUIZIMA GROUP SERVICES est un partenaire multisectoriel qui relie approvisionnement, mobilité, construction et développement local avec une exigence constante de fiabilité.",
       paragraphs: [
-        "IREX Mining a pour vocation d'accompagner les organisations dans l'atteinte de leurs objectifs stratégiques et opérationnels en leur apportant des solutions innovantes, une expertise technique de haut niveau et un appui professionnel adapté à leurs besoins.",
-        "À travers la mobilisation de compétences multidisciplinaires et le partage des meilleures pratiques, IREX Mining intervient notamment dans les domaines de l'ingénierie, de la construction, des mines, de l'environnement, de la santé et sécurité au travail, de la recherche et du développement des capacités.",
-        "Notre ambition est de devenir un partenaire stratégique de confiance en offrant des services intégrés couvrant l'exploration, le développement de projets miniers, l'exploitation, la gestion environnementale, la santé et sécurité au travail, la logistique, la maintenance ainsi que le renforcement des capacités.",
+        "Nous accompagnons les entreprises, les institutions et les particuliers avec des solutions concrètes, une organisation agile et une connaissance fine des réalités du terrain.",
+        "Notre modèle repose sur la complémentarité de huit métiers: commerce général, hydrocarbures, services, transport, immobilier, construction, agriculture et élevage.",
+        "Chaque mission est pensée pour créer une valeur durable, avec une attention particulière portée à la qualité d'exécution, au respect des engagements et au développement des communautés.",
       ],
       mission: {
         title: "Notre Mission",
-        text: "Développer des projets miniers responsables et créateurs de valeur, en plaçant l'excellence opérationnelle, la protection de l'environnement et le développement des communautés au cœur de chacune de nos interventions.",
+        text: "Transformer les besoins de nos clients en solutions fiables, utiles et créatrices de valeur pour la Guinée.",
       },
       vision: {
         title: "Notre Vision",
-        text: "Bâtir un avenir où performance économique, innovation, responsabilité sociale et protection de l'environnement évoluent ensemble pour créer une valeur durable au bénéfice de nos clients, partenaires et des générations futures.",
+        text: "Devenir une référence guinéenne des services intégrés, reconnue pour son sérieux, son impact et sa capacité à faire grandir les projets.",
       },
       values: [
-        { title: "Excellence Opérationnelle", desc: "Les meilleures pratiques internationales au service de projets performants et sécuritaires." },
-        { title: "Responsabilité Environnementale", desc: "Promouvoir une exploitation durable des ressources naturelles." },
-        { title: "Intégrité & Transparence", desc: "Des partenariats durables fondés sur la confiance et la performance." },
-        { title: "Développement Local", desc: "Renforcer les compétences locales et favoriser l'emploi national." },
+        { title: "Fiabilité", desc: "Des engagements clairs, tenus avec méthode et constance." },
+        { title: "Agilité", desc: "Une réponse rapide et adaptée à chaque contexte." },
+        { title: "Intégrité", desc: "Des relations professionnelles bâties sur la confiance." },
+        { title: "Impact local", desc: "Des activités qui contribuent au développement de la Guinée." },
       ],
     },
     services: {
-      tag: "Nos Expertises",
-      title: "Des services intégrés pour toute la chaîne de valeur minière",
+      tag: "Nos domaines d'activité",
+      title: "Huit métiers. Une seule signature: faire avancer vos projets.",
       subtitle:
-        "IREX Mining mobilise des compétences multidisciplinaires pour couvrir l'ensemble du cycle minier — de l'exploration à la fermeture de la mine.",
+        "Un portefeuille d'activités complémentaire pour répondre aux besoins des entreprises, des institutions et des communautés.",
       items: [
         { 
           icon: "compass", 
-          title: "Exploration & Recherche", 
-          desc: "Programmes d'exploration, investigations géologiques et évaluation de gisements avec les meilleures pratiques internationales.",
-          features: ["Cartographie géologique détaillée", "Forage et échantillonnage de précision", "Modélisation 3D des gisements", "Études de faisabilité technique"]
+          title: "Commerce général (import-export)", 
+          desc: "Approvisionnement, négoce et mise en relation pour accompagner les besoins des entreprises et des institutions.",
+          features: ["Importation et exportation", "Approvisionnement professionnel", "Sourcing de produits", "Distribution et représentation"]
         },
         { 
           icon: "hard-hat", 
-          title: "Ingénierie & Construction", 
-          desc: "Conception, dimensionnement et exécution de projets miniers et industriels de A à Z, avec un appui professionnel adapté.",
-          features: ["Études d'ingénierie préliminaires", "Supervision des travaux de construction", "Gestion de projet EPC", "Mise en service et optimisation"]
+          title: "Hydrocarbures & lubrifiants", 
+          desc: "Vente d'hydrocarbures et de produits lubrifiants pour les besoins de la mobilité, de l'industrie et des opérations.",
+          features: ["Fourniture d'hydrocarbures", "Produits lubrifiants", "Approvisionnement régulier", "Solutions adaptées aux flottes"]
         },
         { 
           icon: "pickaxe", 
-          title: "Exploitation Minière", 
-          desc: "Solutions d'exploitation optimisées, performantes et responsables, adaptées aux besoins de nos partenaires.",
-          features: ["Planification de mine à ciel ouvert et souterraine", "Optimisation des opérations de forage et sautage", "Gestion des flottes d'équipements", "Suivi de la production en temps réel"]
+          title: "Prestations de services", 
+          desc: "Des prestations souples et professionnelles pour simplifier vos opérations et vous permettre de rester concentré sur votre cœur de métier.",
+          features: ["Services aux entreprises", "Appui opérationnel", "Gestion de besoins ponctuels", "Solutions sur mesure"]
         },
         { 
           icon: "leaf", 
-          title: "Gestion Environnementale", 
-          desc: "Études d'impact, plans de gestion et surveillance environnementale pour une exploitation durable.",
-          features: ["Études d'impact environnemental et social (EIES)", "Gestion de l'eau et des rejets miniers", "Plans de réhabilitation et de fermeture", "Surveillance de la qualité de l'air et de l'eau"]
+          title: "Transport & logistique", 
+          desc: "Nous organisons le déplacement des personnes et des marchandises avec une logistique pensée pour la fiabilité.",
+          features: ["Transport de marchandises", "Organisation logistique", "Gestion des flux", "Solutions pour entreprises"]
         },
         { 
           icon: "shield", 
-          title: "Santé & Sécurité (HSE)", 
-          desc: "Garantir les plus hauts standards en Santé, Sécurité et Environnement conformes aux normes les plus exigeantes.",
-          features: ["Audits de conformité HSE", "Élaboration de plans de gestion des risques", "Formation aux premiers secours et sauvetage", "Enquêtes sur les incidents et analyses des causes"]
+          title: "Immobilier", 
+          desc: "Des opportunités et services immobiliers pensés pour accompagner l'installation, l'habitat et l'activité professionnelle.",
+          features: ["Conseil immobilier", "Mise en relation", "Accompagnement de projets", "Solutions pour particuliers et entreprises"]
         },
         { 
           icon: "truck", 
-          title: "Logistique & Maintenance", 
-          desc: "Optimisation logistique et maintenance industrielle pour des opérations performantes et continues.",
-          features: ["Gestion de la chaîne d'approvisionnement", "Maintenance prédictive et préventive", "Optimisation des flux de transport", "Gestion des stocks de pièces de rechange"]
+          title: "Construction & travaux publics", 
+          desc: "Nous contribuons à bâtir et rénover les infrastructures qui structurent les territoires.",
+          features: ["Construction de bâtiments", "Rénovation", "Travaux publics", "Suivi et coordination de projets"]
         },
         { 
           icon: "graduation", 
-          title: "Renforcement des Capacités", 
-          desc: "Formation professionnelle et développement des compétences locales pour soutenir l'emploi national.",
-          features: ["Programmes de formation sur mesure", "Transfert de compétences techniques", "Coaching et mentorat", "Évaluation des compétences et certifications"]
+          title: "Agriculture", 
+          desc: "Des activités et partenariats agricoles qui participent à la production et à la sécurité alimentaire.",
+          features: ["Production agricole", "Approvisionnement", "Valorisation des filières", "Partenariats locaux"]
         },
         { 
           icon: "clipboard", 
-          title: "Consultation, Audit et Expertise", 
-          desc: "Conseil technique, audit et expertise de haut niveau pour sécuriser et valoriser vos investissements.",
-          features: ["Due diligence technique et financière", "Audits opérationnels indépendants", "Assistance à la maîtrise d'ouvrage", "Conseils en stratégie de développement minier"]
+          title: "Élevage", 
+          desc: "Nous développons des activités d'élevage et des partenariats qui renforcent les chaînes de valeur locales.",
+          features: ["Élevage et production", "Développement de cheptels", "Partenariats agricoles", "Valorisation des produits"]
         },
       ],
     },
@@ -199,7 +199,7 @@ export const content = {
       tag: "Témoignages",
       title: "La confiance de nos partenaires",
       items: [
-        { quote: "IREX Mining a transformé notre approche de la sécurité. Leur rigueur et leur expertise technique ont hissé notre conformité HSE à un niveau inégalé.", author: "Directeur Opérations", company: "Société Minière, Guinée" },
+        { quote: "Guizima a compris nos contraintes et a livré une réponse fiable, avec une vraie qualité de suivi.", author: "Directeur des Opérations", company: "Entreprise partenaire, Guinée" },
         { quote: "Un partenaire stratégique qui combine innovation technique et responsabilité sociale. Nos projets n'ont jamais été aussi performants.", author: "CEO", company: "Investisseur Minier, Afrique de l'Ouest" },
         { quote: "Le programme de formation a renforcé durablement les compétences de nos équipes locales. Un véritable transfert de savoir-faire.", author: "Responsable RH", company: "Groupe Industriel, Conakry" },
       ],
@@ -223,9 +223,9 @@ export const content = {
     events: {
       tag: "Agenda",
       title: "Événements à venir",
-      subtitle: "Salons, conférences et sessions de formation organisés ou co-organisés par IREX Mining.",
+      subtitle: "Rencontres, partenariats et temps forts qui font vivre l'écosystème Guizima.",
       items: [
-        { name: "Guinea Mining Summit 2026", date: "15-17 Septembre 2026", location: "Conakry, Guinée", type: "Sommet" },
+        { name: "Forum des entrepreneurs guinéens", date: "15-17 Septembre 2026", location: "Conakry, Guinée", type: "Forum" },
         { name: "Formation HSE Niveau 2", date: "08-10 Octobre 2026", location: "Matoto, Conakry", type: "Formation" },
         { name: "Conférence Industrie Minière Durable", date: "22 Novembre 2026", location: "Abidjan, Côte d'Ivoire", type: "Conférence" },
         { name: "Workshop Digitalisation Minière", date: "05 Décembre 2026", location: "En ligne", type: "Workshop" },
@@ -235,17 +235,17 @@ export const content = {
       tag: "Questions Fréquentes",
       title: "Tout ce que vous devez savoir",
       items: [
-        { q: "Quels types de clients IREX Mining accompagne-t-elle ?", a: "Nous accompagnons les sociétés minières, les investisseurs et développeurs de projets, les gouvernements et institutions publiques, les partenaires industriels, les organisations internationales, les communautés locales et les talents du secteur." },
-        { q: "Dans quels domaines intervient IREX Mining ?", a: "Nos interventions couvrent l'ingénierie, la construction, les mines, l'environnement, la santé et sécurité au travail, la recherche et le développement des capacités, ainsi que la consultation et l'expertise spécialisée." },
-        { q: "Quelles sont vos zones d'intervention géographiques ?", a: "Notre siège est à Matoto Centre, Commune Urbaine de Matoto, Conakry — République de Guinée. Nous opérons principalement en Afrique de l'Ouest et collaborons avec des partenaires internationaux." },
-        { q: "Comment puis-je obtenir un devis personnalisé ?", a: "Vous pouvez nous contacter via le formulaire de contact, par téléphone au 626868323 ou par email à irexmine1@outlook.com. Notre équipe vous répondra sous 48h avec une proposition adaptée." },
-        { q: "Proposez-vous des formations professionnelles ?", a: "Oui. Le renforcement des capacités est un pilier de notre offre, avec des formations HSE, techniques et managériales adaptées aux besoins du secteur minier guinéen." },
-        { q: "Quels standards HSE suivez-vous ?", a: "Nous appliquons les meilleures pratiques internationales et garantissons les plus hauts standards en Santé, Sécurité et Environnement, conformes aux normes les plus exigeantes du secteur." },
+        { q: "Quels types de clients accompagnez-vous ?", a: "Nous accompagnons les entreprises, les institutions, les investisseurs et les particuliers qui recherchent un partenaire fiable en Guinée." },
+        { q: "Dans quels domaines intervient Guizima ?", a: "Notre groupe intervient dans le commerce général, les hydrocarbures, les prestations de services, le transport, l'immobilier, la construction, l'agriculture et l'élevage." },
+        { q: "Où intervenez-vous ?", a: "Basé en Guinée, Guizima développe des partenariats et des opérations selon les besoins de ses clients sur le territoire national et dans la sous-région." },
+        { q: "Comment obtenir un devis ?", a: "Écrivez-nous via le formulaire de contact en précisant votre besoin. Notre équipe vous répondra rapidement avec une proposition adaptée." },
+        { q: "Proposez-vous des solutions sur mesure ?", a: "Oui. Notre organisation multisectorielle nous permet de composer une réponse adaptée à chaque projet et à chaque budget." },
+        { q: "Comment devenir partenaire ?", a: "Présentez-nous votre activité et vos capacités via la page Contact. Nous étudierons ensemble les synergies possibles." },
       ],
     },
     careers: {
       tag: "Recrutement",
-      title: "Rejoignez l'aventure IREX Mining",
+      title: "Rejoignez l'aventure Guizima",
       subtitle: "Nous recrutons des talents désireux de contribuer à des projets miniers innovants dans un environnement fondé sur l'excellence, la sécurité et l'intégrité.",
       openings: [
         { title: "Ingénieur Minier Senior", location: "Conakry, Guinée", type: "CDI", dept: "Ingénierie" },
@@ -281,13 +281,13 @@ export const content = {
       info: {
         address: "Matoto Centre, Commune Urbaine de Matoto\nConakry",
         phone: "+224 626 86 83 23",
-        email: "irexmine1@outlook.com",
+        email: "contact@guizimagroup.com",
         hours: "Lun – Ven : 08h00 — 18h00\nSam : 09h00 — 13h00",
       },
     },
     footer: {
-      tagline: "IREX MINING SARL",
-      description: "Solutions d'ingénierie minière innovantes, durables et responsables pour le développement du secteur minier en Guinée et en Afrique de l'Ouest.",
+      tagline: "GUIZIMA GROUP SERVICES",
+      description: "Un groupe guinéen multisectoriel au service du commerce, des infrastructures, de la mobilité et du développement local.",
       columns: {
         company: "Société",
         services: "Services",
@@ -304,13 +304,13 @@ export const content = {
       legal: ["Mentions légales", "Confidentialité", "CGV", "Cookies"],
     },
     chatbot: {
-      title: "IREX Assistant",
+      title: "Guizima Assistant",
       subtitle: "Réponse en quelques secondes",
-      greeting: "Bonjour 👋 Je suis l'assistant IREX Mining. Comment puis-je vous aider aujourd'hui ?",
+      greeting: "Bonjour 👋 Je suis l'assistant Guizima. Comment puis-je vous aider aujourd'hui ?",
       placeholder: "Tapez votre message...",
       quick: ["Vos services ?", "Demander un devis", "Nous contacter", "Nos formations"],
       response:
-        "Merci pour votre message ! Notre équipe vous recontactera sous 48h. Pour une réponse immédiate, appelez le +224 626 86 83 23 ou écrivez à irexmine1@outlook.com.",
+        "Merci pour votre message ! Notre équipe vous recontactera rapidement. Appelez le +224 626 86 83 23 ou écrivez à contact@guizimagroup.com.",
     },
     common: {
       learnMore: "En savoir plus",
