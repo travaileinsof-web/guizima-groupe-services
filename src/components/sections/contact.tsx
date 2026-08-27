@@ -7,6 +7,8 @@ import { content } from "@/lib/content";
 import { Reveal, RevealWords } from "@/components/site/reveal";
 import { toast } from "sonner";
 import { useFetch } from "@/hooks/use-fetch";
+import { SectionBackdrop } from "@/components/site/section-backdrop";
+import { images } from "@/lib/images";
 
 interface ContactInfo {
   id: string;
@@ -80,7 +82,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="relative bg-ivory py-32 overflow-hidden">
-      <div className="absolute inset-0 grid-pattern-dark opacity-40" />
+      <SectionBackdrop image={images.office[0]} tone="light" />
       <div className="absolute top-20 left-10 h-72 w-72 rounded-full opacity-15 blur-2xl animate-blob-2 gpu" style={{ background: "radial-gradient(circle, var(--emerald), transparent 70%)" }} />
 
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10">

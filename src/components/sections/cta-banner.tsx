@@ -6,6 +6,7 @@ import { useSiteStore } from "@/lib/store";
 import { content } from "@/lib/content";
 import { Reveal } from "@/components/site/reveal";
 import { ctaBg } from "@/lib/images";
+import { SectionBackdrop } from "@/components/site/section-backdrop";
 
 export function CtaBanner() {
  const setSection = useSiteStore((s) => s.setSection);
@@ -22,7 +23,7 @@ export function CtaBanner() {
  />
  {/* Gradient overlay */}
  <div className="absolute inset-0 bg-gradient-to-br from-obsidian/95 via-emerald-deep/85 to-obsidian/95" />
- <div className="absolute inset-0 grid-pattern opacity-30" />
+ <SectionBackdrop tone="red" className="opacity-70" />
 
  {/* Floating hexagons */}
  <div className="absolute left-10 top-10 hexagon h-16 w-16 border border-gold/30 animate-spin-cw gpu" />

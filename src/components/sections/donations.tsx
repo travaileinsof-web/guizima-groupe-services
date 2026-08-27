@@ -7,6 +7,8 @@ import { content } from "@/lib/content";
 import { Reveal, RevealWords } from "@/components/site/reveal";
 import { useFetch } from "@/hooks/use-fetch";
 import { DonationModal, type DonationTierInfo } from "@/components/site/donation-modal";
+import { SectionBackdrop } from "@/components/site/section-backdrop";
+import { images } from "@/lib/images";
 
 interface ApiDonationTier {
   id: string;
@@ -35,7 +37,7 @@ export function Donations() {
   return (
     <section id="donations" className="relative overflow-hidden py-32">
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-deep via-emerald-deep/95 to-emerald/85" />
-      <div className="absolute inset-0 grid-pattern opacity-30" />
+      <SectionBackdrop image={images.nature[1]} tone="red" />
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         {[...Array(8)].map((_, i) => (

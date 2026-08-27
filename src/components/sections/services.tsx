@@ -18,6 +18,7 @@ import { content } from "@/lib/content";
 import { Reveal, RevealWords } from "@/components/site/reveal";
 import { serviceImages } from "@/lib/images";
 import { ServiceModal, type ServiceItem } from "@/components/site/service-modal";
+import { SectionBackdrop } from "@/components/site/section-backdrop";
 
 const iconMap: Record<string, typeof Compass> = {
  compass: Compass,
@@ -48,8 +49,7 @@ export function Services() {
    }} 
  />
  <section id="services" className="relative bg-coal py-32">
- {/* Background pattern + glow */}
- <div className="absolute inset-0 grid-pattern opacity-30" />
+ <SectionBackdrop image={serviceImages.compass} tone="red" />
  <div className="absolute left-1/2 top-0 h-96 w-[800px] -translate-x-1/2 rounded-full bg-gold/5 blur-2xl" />
 
  <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10">

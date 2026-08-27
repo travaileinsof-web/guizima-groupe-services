@@ -8,6 +8,8 @@ import { useFetch } from "@/hooks/use-fetch";
 import { EventModal, ApiEvent } from "@/components/site/event-modal";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { SectionBackdrop } from "@/components/site/section-backdrop";
+import { eventImages } from "@/lib/images";
 
 // ApiEvent is now imported from event-modal.tsx
 
@@ -30,7 +32,7 @@ export function Events() {
 
   return (
     <section id="events" className="relative bg-cream py-32 overflow-hidden">
-      <div className="absolute inset-0 grid-pattern-dark opacity-40" />
+      <SectionBackdrop image={eventImages[2]} tone="red" />
       <div className="absolute bottom-20 right-10 h-72 w-72 rounded-full opacity-15 blur-2xl animate-blob-2 gpu"
         style={{ background: "radial-gradient(circle, var(--emerald), transparent 70%)" }}
       />

@@ -8,6 +8,8 @@ import { Reveal, RevealWords } from "@/components/site/reveal";
 import { useFetch } from "@/hooks/use-fetch";
 import { ProjectModal, ApiProject } from "@/components/site/project-modal";
 import { useState } from "react";
+import { SectionBackdrop } from "@/components/site/section-backdrop";
+import { projectImages } from "@/lib/images";
 
 // ApiProject is now imported from project-modal.tsx
 
@@ -19,7 +21,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="relative bg-obsidian py-32 overflow-hidden">
-      <div className="absolute inset-0 grid-pattern opacity-30" />
+      <SectionBackdrop image={projectImages[4]} tone="blue" />
       <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       <div className="absolute top-1/4 left-10 h-72 w-72 rounded-full opacity-15 blur-2xl"
         style={{ background: "radial-gradient(circle, var(--emerald), transparent 70%)" }}

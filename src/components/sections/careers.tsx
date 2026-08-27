@@ -7,6 +7,8 @@ import { content } from "@/lib/content";
 import { Reveal, RevealWords } from "@/components/site/reveal";
 import { useFetch } from "@/hooks/use-fetch";
 import { motion, AnimatePresence } from "framer-motion";
+import { SectionBackdrop } from "@/components/site/section-backdrop";
+import { images } from "@/lib/images";
 
 interface ApiJobOpening {
   id: string;
@@ -27,7 +29,7 @@ export function Careers() {
 
   return (
     <section id="careers" className="relative bg-coal py-32 overflow-hidden">
-      <div className="absolute inset-0 grid-pattern opacity-30" />
+      <SectionBackdrop image={images.engineer[1]} tone="blue" />
       <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       <div className="absolute top-20 right-10 h-72 w-72 rounded-full opacity-15 blur-2xl animate-blob-2 gpu"
         style={{ background: "radial-gradient(circle, var(--emerald), transparent 70%)" }}

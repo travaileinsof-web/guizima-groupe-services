@@ -211,8 +211,8 @@ export const content = {
     },
     blog: {
       tag: "Actualités",
-      title: "Insights & publications",
-      subtitle: "Analyses, retours d'expérience et actualités du secteur minier guinéen et international.",
+      title: "Actualités & perspectives",
+      subtitle: "Les activités, initiatives et perspectives de Guizima Group Services en Guinée.",
       items: [
         { title: "L'avenir de l'exploitation minière durable en Guinée", category: "Stratégie", date: "12 Juin 2026", readTime: "8 min" },
         { title: "Standards HSE : comment dépasser les exigences internationales", category: "HSE", date: "28 Mai 2026", readTime: "6 min" },
@@ -512,8 +512,8 @@ export const content = {
     },
     blog: {
       tag: "News",
-      title: "Insights & publications",
-      subtitle: "Analyses, case studies and news from the Guinean and international mining sector.",
+      title: "News & Insights",
+      subtitle: "Updates, initiatives and perspectives from Guizima Group Services in Guinea.",
       items: [
         { title: "The future of sustainable mining in Guinea", category: "Strategy", date: "June 12, 2026", readTime: "8 min" },
         { title: "HSE standards: exceeding international requirements", category: "HSE", date: "May 28, 2026", readTime: "6 min" },

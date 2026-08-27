@@ -371,26 +371,39 @@
   vertical-align: bottom;
 }
 
-/* Grid background pattern */
+/* Lightweight premium topographic background */
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(212, 165, 71, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212, 165, 71, 0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
+    radial-gradient(ellipse at 18% 20%, rgba(227, 41, 63, 0.16), transparent 34%),
+    radial-gradient(ellipse at 82% 72%, rgba(11, 98, 181, 0.18), transparent 38%),
+    repeating-linear-gradient(118deg, transparent 0 31px, rgba(255, 255, 255, 0.045) 32px, transparent 33px),
+    repeating-linear-gradient(28deg, transparent 0 89px, rgba(255, 255, 255, 0.035) 90px, transparent 91px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  animation: topographic-drift 28s ease-in-out infinite alternate;
 }
 
 .grid-pattern-dark {
   background-image:
-    linear-gradient(rgba(10, 10, 11, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(10, 10, 11, 0.05) 1px, transparent 1px);
-  background-size: 60px 60px;
+    radial-gradient(ellipse at 78% 18%, rgba(227, 41, 63, 0.1), transparent 34%),
+    radial-gradient(ellipse at 14% 78%, rgba(11, 98, 181, 0.12), transparent 38%),
+    repeating-linear-gradient(118deg, transparent 0 31px, rgba(7, 20, 38, 0.055) 32px, transparent 33px),
+    repeating-linear-gradient(28deg, transparent 0 89px, rgba(7, 20, 38, 0.04) 90px, transparent 91px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  animation: topographic-drift 34s ease-in-out infinite alternate-reverse;
 }
 
 .grid-pattern-emerald {
   background-image:
-    linear-gradient(rgba(45, 122, 95, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(45, 122, 95, 0.06) 1px, transparent 1px);
-  background-size: 60px 60px;
+    radial-gradient(ellipse at 50% 0%, rgba(74, 155, 226, 0.16), transparent 42%),
+    repeating-linear-gradient(135deg, transparent 0 35px, rgba(255, 255, 255, 0.04) 36px, transparent 37px),
+    repeating-linear-gradient(45deg, transparent 0 105px, rgba(227, 41, 63, 0.04) 106px, transparent 107px);
+  background-size: 100% 100%, 100% 100%, 100% 100%;
+  animation: topographic-drift 30s ease-in-out infinite alternate;
+}
+
+@keyframes topographic-drift {
+  from { background-position: 0 0, 0 0, 0 0, 0 0; }
+  to { background-position: 2% -1%, -2% 1%, 1% 0, -1% 1%; }
 }
 
 /* Premium card hover lift */

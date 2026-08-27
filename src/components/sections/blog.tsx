@@ -7,6 +7,8 @@ import { content } from "@/lib/content";
 import { Reveal, RevealWords } from "@/components/site/reveal";
 import { useFetch } from "@/hooks/use-fetch";
 import { BlogModal, type ApiBlogPost } from "@/components/site/blog-modal";
+import { SectionBackdrop } from "@/components/site/section-backdrop";
+import { images } from "@/lib/images";
 
 export function Blog() {
   const lang = useSiteStore((s) => s.lang);
@@ -16,8 +18,10 @@ export function Blog() {
 
   return (
     <section id="blog" className="relative bg-coal py-32 overflow-hidden">
-      <div className="absolute inset-0 grid-pattern opacity-30" />
+      <SectionBackdrop image={images.construction[1]} tone="blue" className="h-[32rem]" />
       <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+      <div className="absolute right-8 top-24 h-44 w-44 rotate-45 border border-gold/25 [clip-path:polygon(50%_0,100%_50%,50%_100%,0_50%)]" />
+      <div className="absolute right-16 top-32 h-28 w-28 -rotate-12 border border-emerald-light/30 [clip-path:polygon(50%_0,100%_50%,50%_100%,0_50%)]" />
       <div className="absolute top-20 left-10 h-72 w-72 rounded-full opacity-15 blur-2xl"
         style={{ background: "radial-gradient(circle, var(--copper), transparent 70%)" }}
       />

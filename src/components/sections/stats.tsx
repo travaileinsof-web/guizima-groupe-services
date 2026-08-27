@@ -6,6 +6,7 @@ import { content } from "@/lib/content";
 import { AnimatedCounter } from "@/components/site/animated-counter";
 import { Reveal } from "@/components/site/reveal";
 import { useFetch } from "@/hooks/use-fetch";
+import { SectionBackdrop } from "@/components/site/section-backdrop";
 
 interface ApiStat {
   id: string;
@@ -31,7 +32,7 @@ export function Stats() {
 
   return (
     <section ref={ref} className="relative overflow-hidden bg-emerald-deep py-32">
-      <div className="absolute inset-0 grid-pattern opacity-30" />
+      <SectionBackdrop tone="blue" />
 
       <div className="absolute left-10 top-10 hidden lg:block animate-spin-cw gpu">
         <div className="hexagon h-16 w-16 border border-gold/30 bg-gold/5" />

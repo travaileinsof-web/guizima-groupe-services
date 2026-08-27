@@ -6,6 +6,8 @@ import { useSiteStore } from "@/lib/store";
 import { content } from "@/lib/content";
 import { Reveal, RevealWords } from "@/components/site/reveal";
 import { useFetch } from "@/hooks/use-fetch";
+import { SectionBackdrop } from "@/components/site/section-backdrop";
+import { teamAvatars } from "@/lib/images";
 
 interface ApiTeamMember {
   id: string;
@@ -31,7 +33,7 @@ export function Team() {
 
   return (
     <section id="team" className="relative bg-ivory py-32 overflow-hidden">
-      <div className="absolute inset-0 grid-pattern-dark opacity-40" />
+      <SectionBackdrop image={teamAvatars[3]} tone="blue" />
       <div className="absolute top-32 right-10 h-72 w-72 rounded-full opacity-10 blur-2xl animate-blob-2 gpu"
         style={{ background: "radial-gradient(circle, var(--gold), transparent 70%)" }}
       />

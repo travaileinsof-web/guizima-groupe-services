@@ -6,6 +6,7 @@ import { useSiteStore } from "@/lib/store";
 import { content } from "@/lib/content";
 import { Reveal, RevealWords } from "@/components/site/reveal";
 import { aboutImage, images } from "@/lib/images";
+import { SectionBackdrop } from "@/components/site/section-backdrop";
 
 const valueIcons = [Award, Leaf, Shield, Heart];
 
@@ -16,7 +17,7 @@ export function About() {
  return (
  <section id="about" className="relative bg-ivory py-32 overflow-hidden">
  {/* Decorative bg pattern */}
- <div className="absolute inset-0 grid-pattern-dark opacity-50" />
+ <SectionBackdrop image={aboutImage} tone="light" />
 
  {/* Floating gold blob */}
  <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full opacity-10 blur-2xl" style={{ background: "radial-gradient(circle, var(--gold), transparent 70%)" }} />
