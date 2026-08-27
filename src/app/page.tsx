@@ -5,7 +5,6 @@ import { useSiteStore } from "@/lib/store";
 
 // Premium UX components
 import { CustomCursor } from "@/components/site/custom-cursor";
-import { PageLoader } from "@/components/site/page-loader";
 import { ScrollProgress } from "@/components/site/scroll-progress";
 import { Navbar } from "@/components/site/navbar";
 import { Footer } from "@/components/site/footer";
@@ -61,7 +60,6 @@ export default function Home() {
   return (
     <>
       <CustomCursor />
-      <PageLoader />
       <ScrollProgress />
       <Navbar />
 

@@ -9,7 +9,12 @@ import { AnimatedCounter } from "@/components/site/animated-counter";
 import { RevealWords } from "@/components/site/reveal";
 import { MagneticButton } from "@/components/site/magnetic-button";
 import { heroImages } from "@/lib/images";
-import { GuizimaOrbit } from "@/components/site/guizima-orbit";
+import dynamic from "next/dynamic";
+
+const GuizimaOrbit = dynamic(
+ () => import("@/components/site/guizima-orbit").then((module) => module.GuizimaOrbit),
+ { ssr: false }
+);
 
 /** Deterministic seeded random — same values on server & client */
 function seededRandom(seed: number) {
