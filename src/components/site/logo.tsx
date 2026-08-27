@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type LogoProps = {
   className?: string;
@@ -18,7 +19,7 @@ export function Logo({ className = "", size = 40, variant = "full" }: LogoProps)
         className="flex aspect-square items-center justify-center border border-gold/70 bg-gold font-display font-black text-obsidian"
         style={{ height: size * 0.82, fontSize: size * 0.34 }}
       >
-        G
+        <Image src="/icon.png" width={size * 0.82} height={size * 0.82} alt="Guizima Group Services logo" />
       </span>
       {variant !== "mark" && (
         <span className="flex flex-col justify-center leading-none">
