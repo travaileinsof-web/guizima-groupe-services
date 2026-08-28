@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   keywords: ["Guizima Group Services", "commerce général", "hydrocarbures", "transport", "logistique", "construction", "agriculture", "élevage", "Guinée"],
   authors: [{ name: "GUIZIMA GROUP SERVICES" }],
   icons: {
-    icon: "/logo.png",
+    icon: "/icon.png",
+    apple: "/icon.png"  
   },
   openGraph: {
     title: "GUIZIMA GROUP SERVICES — Une force, plusieurs métiers",
