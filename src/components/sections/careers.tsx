@@ -28,7 +28,8 @@ interface ApiJobOpening {
 // ==========================================
 export function Careers() {
   const lang = useSiteStore((s) => s.lang);
-  const c = content[lang].careers;
+  const localizedCareers = content[lang].careers;
+  const c = "hero" in localizedCareers ? localizedCareers : content.fr.careers;
   const { data: jobs, loading } = useFetch<ApiJobOpening[]>("/api/careers");
   const setSection = useSiteStore((s) => s.setSection);
 
