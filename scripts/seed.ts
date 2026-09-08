@@ -98,93 +98,69 @@ async function main() {
   }
   console.log(`✓ ${posts.length} blog posts`);
 
-  // 7. Events
-  const events = [
-    { name: "Guinea Mining Summit 2026", nameEn: "Guinea Mining Summit 2026", description: "Sommet annuel du secteur minier guinéen.", descriptionEn: "Annual Guinean mining sector summit.", date: "15-17 Septembre 2026", location: "Conakry, Guinée", type: "Sommet", image: "https://sfile.chatglm.cn/images-ppt/9f4d2bdea171.jpg" },
-    { name: "Formation HSE Niveau 2", nameEn: "HSE Training Level 2", description: "Formation avancée HSE pour professionnels.", descriptionEn: "Advanced HSE training for professionals.", date: "08-10 Octobre 2026", location: "Matoto, Conakry", type: "Formation", image: "https://sfile.chatglm.cn/images-ppt/a1abd893bc83.jpg" },
-    { name: "Conférence Industrie Minière Durable", nameEn: "Sustainable Mining Industry Conference", description: "Conférence régionale sur la durabilité minière.", descriptionEn: "Regional conference on mining sustainability.", date: "22 Novembre 2026", location: "Abidjan, Côte d'Ivoire", type: "Conférence", image: "https://sfile.chatglm.cn/images-ppt/28c01f758d65.jpg" },
-    { name: "Workshop Digitalisation Minière", nameEn: "Mining Digitalization Workshop", description: "Atelier pratique sur la digitalisation minière.", descriptionEn: "Practical workshop on mining digitalization.", date: "05 Décembre 2026", location: "En ligne", type: "Workshop", image: "https://sfile.chatglm.cn/images-ppt/95c12cc7484e.jpg" },
-  ];
-  for (const e of events) {
-    await db.event.upsert({ where: { name: e.name }, update: {}, create: e });
-  }
-  console.log(`✓ ${events.length} events`);
+  // 8. Events
+  const events = [];
 
-  // 8. Job openings
+  // 9. Job openings
   const jobs = [
-    { title: "Ingénieur Minier Senior", titleEn: "Senior Mining Engineer", description: "Pilote de projets miniers, vous supervisez l'exploration et l'exploitation.", descriptionEn: "Leading mining projects, supervising exploration and operations.", location: "Conakry, Guinée", type: "CDI", dept: "Ingénierie" },
-    { title: "Spécialiste HSE", titleEn: "HSE Specialist", description: "Garant des standards HSE sur site minier.", descriptionEn: "Guarantor of HSE standards on mining site.", location: "Site Boké", type: "CDI", dept: "HSE" },
-    { title: "Formateur Technique", titleEn: "Technical Trainer", description: "Anime des formations techniques pour équipes locales.", descriptionEn: "Conducts technical training for local teams.", location: "Conakry, Guinée", type: "CDD", dept: "Formation" },
-    { title: "Responsable Logistique", titleEn: "Logistics Manager", description: "Supervise la chaîne logistique minière.", descriptionEn: "Supervises the mining logistics chain.", location: "Conakry, Guinée", type: "CDI", dept: "Logistique" },
+    { title: "Chauffeur Poids Lourd", titleEn: "Heavy Truck Driver", description: "Transport de marchandises sur le territoire national.", descriptionEn: "Freight transport across the national territory.", location: "Conakry", type: "CDI", dept: "Logistique" },
+    { title: "Ingénieur BTP", titleEn: "Civil Engineer", description: "Supervision des chantiers de construction.", descriptionEn: "Supervision of construction sites.", location: "Conakry", type: "CDI", dept: "Construction" },
+    { title: "Agent Commercial Immobilier", titleEn: "Real Estate Agent", description: "Prospection et gestion des biens immobiliers.", descriptionEn: "Prospecting and property management.", location: "Conakry", type: "CDD", dept: "Immobilier" },
   ];
   for (const j of jobs) {
-    await db.jobOpening.upsert({ where: { title: j.title }, update: {}, create: j });
+    await db.jobOpening.upsert({ where: { title: j.title }, update: { type: j.type, dept: j.dept, location: j.location }, create: j });
   }
   console.log(`✓ ${jobs.length} job openings`);
 
-  // 9. Donation tiers
-  const tiers = [
-    { amount: 50000, title: "Contributeur", titleEn: "Contributor", perks: "Certificat de contribution\nNewsletter communautaire", perksEn: "Contribution certificate\nCommunity newsletter", popular: false, order: 1 },
-    { amount: 250000, title: "Soutien", titleEn: "Supporter", perks: "Certificat signé\nRapport d'impact annuel\nVisite de projet (1)", perksEn: "Signed certificate\nAnnual impact report\nProject visit (1)", popular: true, order: 2 },
-    { amount: 1000000, title: "Partenaire", titleEn: "Partner", perks: "Statut Partenaire\nRapport trimestriel\nVisites guidées (4)\nReconnaissance publique", perksEn: "Partner status\nQuarterly report\nGuided tours (4)\nPublic recognition", popular: false, order: 3 },
-  ];
-  for (const t of tiers) {
-    await db.donationTier.upsert({ where: { amount: t.amount }, update: {}, create: t });
-  }
-  console.log(`✓ ${tiers.length} donation tiers`);
+  // 10. Donation tiers
+  const tiers = [];
 
-  // 10. FAQ items
+  // 11. FAQ items
   const faqs = [
-    { question: "Quels types de clients IREX Mining accompagne-t-elle ?", questionEn: "What types of clients does IREX Mining support?", answer: "Nous accompagnons les sociétés minières, les investisseurs et développeurs de projets, les gouvernements et institutions publiques, les partenaires industriels, les organisations internationales, les communautés locales et les talents du secteur.", answerEn: "We support mining companies, investors and project developers, governments and public institutions, industrial partners, international organizations, local communities and sector talents.", order: 1 },
-    { question: "Dans quels domaines intervient IREX Mining ?", questionEn: "In which areas does IREX Mining operate?", answer: "Nos interventions couvrent l'ingénierie, la construction, les mines, l'environnement, la santé et sécurité au travail, la recherche et le développement des capacités, ainsi que la consultation et l'expertise spécialisée.", answerEn: "Our interventions cover engineering, construction, mining, environment, occupational health and safety, research and capacity building, as well as specialized consulting and expertise.", order: 2 },
-    { question: "Quelles sont vos zones d'intervention géographiques ?", questionEn: "What are your geographic intervention zones?", answer: "Notre siège est à Matoto Centre, Commune Urbaine de Matoto, Conakry. Nous opérons principalement en Afrique de l'Ouest et collaborons avec des partenaires internationaux.", answerEn: "Our headquarters is at Matoto Centre, Commune Urbaine de Matoto, Conakry. We mainly operate in West Africa and collaborate with international partners.", order: 3 },
-    { question: "Comment puis-je obtenir un devis personnalisé ?", questionEn: "How can I get a custom quote?", answer: "Vous pouvez nous contacter via le formulaire de contact, par téléphone au 626868323 ou par email à irexmine1@outlook.com. Notre équipe vous répondra sous 48h avec une proposition adaptée.", answerEn: "You can contact us via the contact form, by phone at 626868323, or by email at irexmine1@outlook.com. Our team will respond within 48h with a tailored proposal.", order: 4 },
-    { question: "Proposez-vous des formations professionnelles ?", questionEn: "Do you offer professional training?", answer: "Oui. Le renforcement des capacités est un pilier de notre offre, avec des formations HSE, techniques et managériales adaptées aux besoins du secteur minier guinéen.", answerEn: "Yes. Capacity building is a pillar of our offering, with HSE, technical and managerial training adapted to the needs of the Guinean mining sector.", order: 5 },
-    { question: "Quels standards HSE suivez-vous ?", questionEn: "What HSE standards do you follow?", answer: "Nous appliquons les meilleures pratiques internationales et garantissons les plus hauts standards en Santé, Sécurité et Environnement, conformes aux normes les plus exigeantes du secteur.", answerEn: "We apply the best international practices and guarantee the highest Health, Safety and Environment standards, compliant with the most demanding sector norms.", order: 6 },
+    { question: "Dans quels secteurs opère GUIZIMA GROUP SERVICES ?", questionEn: "In which sectors does GUIZIMA GROUP SERVICES operate?", answer: "Nous sommes un groupe multisectoriel actif dans le commerce général, les hydrocarbures, les prestations de services, le transport et la logistique, l'immobilier, le BTP, ainsi que l'agriculture et l'élevage.", answerEn: "We are a multi-sector group active in general commerce, hydrocarbons, service provision, transport and logistics, real estate, construction, as well as agriculture and livestock.", order: 1 },
+    { question: "Où êtes-vous situés ?", questionEn: "Where are you located?", answer: "Notre siège social est situé à Matoto Centre, dans la Commune Urbaine de Matoto à Conakry, en République de Guinée.", answerEn: "Our head office is located in Matoto Centre, in the Urban Commune of Matoto in Conakry, Republic of Guinea.", order: 2 },
+    { question: "Proposez-vous des services de transport national ?", questionEn: "Do you offer national transport services?", answer: "Oui, notre division Transport & Logistique dispose d'une flotte adaptée pour acheminer vos marchandises en toute sécurité partout en Guinée.", answerEn: "Yes, our Transport & Logistics division has a fleet adapted to safely route your goods anywhere in Guinea.", order: 3 },
+    { question: "Comment demander un devis pour un projet de construction ?", questionEn: "How do I request a quote for a construction project?", answer: "Vous pouvez utiliser le bouton 'Demander un devis' sur notre site, ou nous contacter directement par email ou téléphone. Un conseiller dédié vous répondra rapidement.", answerEn: "You can use the 'Request a quote' button on our site, or contact us directly by email or phone. A dedicated advisor will respond quickly.", order: 4 },
   ];
   for (const f of faqs) {
     await db.faqItem.upsert({ where: { question: f.question }, update: {}, create: f });
   }
   console.log(`✓ ${faqs.length} FAQ items`);
 
-  // 11. Site stats
+  // 12. Site stats
   const stats = [
-    { key: "complianceRate", label: "Conformité HSE", labelEn: "HSE Compliance", value: 100, suffix: "%", icon: "shield", order: 1 },
-    { key: "productCategories", label: "Catégories de Produits", labelEn: "Product Categories", value: 7, suffix: "", icon: "package", order: 2 },
-    { key: "yearsExpertise", label: "Domaines d'Expertise", labelEn: "Expertise Domains", value: 12, suffix: "+", icon: "award", order: 3 },
-    { key: "supportAvailability", label: "Support Disponible", labelEn: "Support Available", value: 24, suffix: "/7", icon: "headphones", order: 4 },
+    { key: "sectors", label: "Secteurs d'activité", labelEn: "Business Sectors", value: 8, suffix: "", icon: "layers", order: 1 },
+    { key: "projects", label: "Projets Réalisés", labelEn: "Completed Projects", value: 150, suffix: "+", icon: "check-circle", order: 2 },
+    { key: "clients", label: "Clients Satisfaits", labelEn: "Satisfied Clients", value: 500, suffix: "+", icon: "users", order: 3 },
+    { key: "coverage", label: "Couverture Nationale", labelEn: "National Coverage", value: 100, suffix: "%", icon: "map", order: 4 },
   ];
   for (const s of stats) {
-    await db.siteStat.upsert({ where: { key: s.key }, update: {}, create: s });
+    await db.siteStat.upsert({ where: { key: s.key }, update: { label: s.label, value: s.value }, create: s });
   }
   console.log(`✓ ${stats.length} site stats`);
 
-  // 12. Partners
+  // 13. Partners
   const partners = [
-    { name: "MINISTRY OF MINES", order: 1 },
-    { name: "CBG", order: 2 },
-    { name: "RIO TINTO", order: 3 },
-    { name: "SMB", order: 4 },
-    { name: "SIMFER", order: 5 },
-    { name: "ANGLOGOLD ASHANTI", order: 6 },
-    { name: "GUINEA ALUMINA", order: 7 },
-    { name: "WORLD BANK", order: 8 },
-    { name: "UNDP", order: 9 },
+    { name: "Ministère du Commerce", order: 1 },
+    { name: "Chambre d'Agriculture", order: 2 },
+    { name: "Syndicat des Transporteurs", order: 3 },
   ];
   for (const p of partners) {
     await db.partner.upsert({ where: { name: p.name }, update: {}, create: p });
   }
   console.log(`✓ ${partners.length} partners`);
 
-  // 13. Contact info
+  // 14. Contact info
   await db.contactInfo.upsert({
     where: { id: "contact-info-single" },
-    update: {},
+    update: {
+      emails: "contact@guizimagroup.com",
+    },
     create: {
       id: "contact-info-single",
       address: "Matoto Centre, Commune Urbaine de Matoto\nConakry",
       phones: "224 624 56 72 72",
-      emails: "irexmine1@outlook.com",
+      emails: "contact@guizimagroup.com",
       hours: "Lun – Ven : 08h00 — 18h00\nSam : 09h00 — 13h00",
       hoursEn: "Mon – Fri: 8:00 AM — 6:00 PM\nSat: 9:00 AM — 1:00 PM",
       mapUrl: "https://www.google.com/maps?q=Matoto+Centre+Conakry+Guinea&output=embed",
@@ -193,7 +169,7 @@ async function main() {
   console.log(`✓ Contact info`);
 
   console.log("\n✅ Seed complete!");
-  console.log("   Admin login: admin@irexmining.com / admin123");
+  console.log(`   Admin login: ${adminEmail} / ${adminPassword}`);
 }
 
 main()
