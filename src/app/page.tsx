@@ -29,6 +29,8 @@ import { Careers } from "@/components/sections/careers";
 import { Donations } from "@/components/sections/donations";
 import { CtaBanner } from "@/components/sections/cta-banner";
 
+import { FloatingCta } from "@/components/site/floating-cta";
+
 export default function Home() {
   const section = useSiteStore((s) => s.section);
   const visibleSections = useSiteStore((s) => s.visibleSections);
@@ -62,6 +64,7 @@ export default function Home() {
       <CustomCursor />
       <ScrollProgress />
       <Navbar />
+      <FloatingCta />
 
       <ProductInquiryModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
 

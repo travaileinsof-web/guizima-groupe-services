@@ -219,21 +219,6 @@ export function Navbar() {
 
           {/* Right actions */}
           <div className="flex items-center gap-1.5 sm:gap-3">
-            
-            {/* CTA (Appears on scroll) */}
-            <div className={cn(
-              "hidden md:flex overflow-hidden transition-all duration-500 items-center",
-              scrolled ? "max-w-[250px] opacity-100 ml-2" : "max-w-0 opacity-0 ml-0 pointer-events-none"
-            )}>
-              <button
-                onClick={() => go("contact")}
-                data-cursor="hover"
-                className="whitespace-nowrap inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold to-copper px-5 py-2 text-sm font-medium text-obsidian transition-all hover:from-gold-bright hover:to-copper-light hover:shadow-[0_8px_20px_-8px_rgba(212,165,71,0.6)]"
-              >
-                {c.nav.cta}
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </button>
-            </div>
 
             {/* Mobile menu trigger */}
             <button

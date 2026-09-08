@@ -112,7 +112,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="relative bg-obsidian pt-20">
+    <footer id="footer" className="relative bg-obsidian pt-20">
       <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
