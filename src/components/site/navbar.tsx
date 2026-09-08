@@ -81,13 +81,44 @@ export function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         className={cn(
-          "fixed inset-x-0 top-0 z-[100] transition-all duration-500",
+          "fixed inset-x-0 top-0 z-[100] transition-all duration-500 flex flex-col",
           scrolled || isMenuOpen
-            ? "glass-strong py-2.5 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.6)] sm:py-3"
-            : "py-3.5 bg-gradient-to-b from-black/80 via-black/40 to-transparent sm:py-5"
+            ? "glass-strong shadow-[0_8px_30px_-12px_rgba(0,0,0,0.6)]"
+            : "bg-gradient-to-b from-black/80 via-black/40 to-transparent"
         )}
       >
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 sm:px-6 lg:px-10">
+        {/* TOP BAR (Disappears on scroll) */}
+        <div
+          className={cn(
+            "mx-auto flex w-full max-w-[1400px] items-center justify-end px-4 sm:px-6 lg:px-10 transition-all duration-500 overflow-hidden",
+            scrolled ? "h-0 opacity-0" : "h-10 sm:h-12 opacity-100"
+          )}
+        >
+          <div className="flex items-center gap-4 text-xs font-medium text-ivory/70">
+            <a href="mailto:contact@guizima.com" className="hidden sm:inline hover:text-gold transition-colors">
+              contact@guizima.com
+            </a>
+            <div className="hidden sm:block h-3 w-px bg-border" />
+            <button
+              onClick={toggleLang}
+              data-cursor="hover"
+              className="group flex items-center gap-1.5 hover:text-gold transition-colors"
+            >
+              <Globe className="h-3.5 w-3.5" />
+              <span className="uppercase tracking-wider">{lang}</span>
+              <span className="text-muted-foreground">/</span>
+              <span className="uppercase tracking-wider text-muted-foreground group-hover:text-gold/70">
+                {lang === "fr" ? "EN" : "FR"}
+              </span>
+            </button>
+          </div>
+        </div>
+
+        {/* MAIN NAV */}
+        <div className={cn(
+          "mx-auto flex w-full max-w-[1400px] items-center justify-between px-4 sm:px-6 lg:px-10 transition-all duration-500",
+          scrolled ? "py-2.5 sm:py-3" : "py-2 sm:py-3"
+        )}>
           {/* Logo */}
           <button
             onClick={() => go("home")}
@@ -100,7 +131,41 @@ export function Navbar() {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-1">
-            {mainNav.map((s) => (
+            {/* Le Groupe */}
+            <div className="group relative">
+              <button
+                onClick={() => go("about")}
+                data-cursor="hover"
+                className={cn(
+                  "px-4 py-2 text-sm font-medium transition-colors duration-300 drop-shadow-md",
+                  ["about", "team"].includes(section) ? "text-gold" : "text-ivory/70 hover:text-ivory"
+                )}
+              >
+                Le Groupe
+                {["about", "team"].includes(section) && (
+                  <div className="absolute -bottom-0.5 left-1/2 h-px w-6 -translate-x-1/2 bg-gradient-to-r from-transparent via-gold to-transparent" />
+                )}
+              </button>
+              <div className="invisible absolute left-0 top-full pt-2 opacity-0 translate-y-2 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
+                <div className="glass-strong rounded-xl p-2 min-w-[200px] border border-border/50 shadow-2xl">
+                  {SECTIONS.filter(s => ["about", "team"].includes(s.id) && isVisible(s.id)).map((s) => (
+                    <button
+                      key={s.id}
+                      onClick={() => go(s.id)}
+                      className={cn(
+                        "block w-full rounded-lg px-4 py-2 text-left text-sm transition-colors",
+                        section === s.id ? "bg-gold/10 text-gold" : "text-ivory/70 hover:bg-white/5 hover:text-ivory"
+                      )}
+                    >
+                      {c.nav[s.label]}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Main single links */}
+            {SECTIONS.filter(s => ["services", "products", "projects", "blog", "careers"].includes(s.id) && isVisible(s.id)).map((s) => (
               <button
                 key={s.id}
                 onClick={() => go(s.id)}
@@ -118,62 +183,57 @@ export function Navbar() {
                 )}
               </button>
             ))}
-            {/* More menu */}
-            {moreNav.length > 0 && (
-              <div className="group relative">
-                <button
-                  data-cursor="hover"
-                  className="px-4 py-2 text-sm font-medium text-ivory/70 hover:text-ivory transition-colors drop-shadow-md"
-                >
-                  <Plus className="h-3.5 w-3.5" />
-                </button>
-                <div className="invisible absolute right-0 top-full pt-2 opacity-0 translate-y-2 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
-                  <div className="glass-strong rounded-2xl p-2 min-w-[200px]">
-                    {moreNav.map((s) => (
-                      <button
-                        key={s.id}
-                        onClick={() => go(s.id)}
-                        className={cn(
-                          "block w-full rounded-lg px-4 py-2 text-left text-sm transition-colors",
-                          section === s.id
-                            ? "bg-gold/10 text-gold"
-                            : "text-ivory/70 hover:bg-white/5 hover:text-ivory"
-                        )}
-                      >
-                        {c.nav[s.label]}
-                      </button>
-                    ))}
-                  </div>
+
+            {/* Ressources (More) */}
+            <div className="group relative">
+              <button
+                data-cursor="hover"
+                className={cn(
+                  "px-4 py-2 text-sm font-medium transition-colors duration-300 drop-shadow-md",
+                  ["events", "donations", "faq"].includes(section) ? "text-gold" : "text-ivory/70 hover:text-ivory"
+                )}
+              >
+                Ressources
+                {["events", "donations", "faq"].includes(section) && (
+                  <div className="absolute -bottom-0.5 left-1/2 h-px w-6 -translate-x-1/2 bg-gradient-to-r from-transparent via-gold to-transparent" />
+                )}
+              </button>
+              <div className="invisible absolute right-0 top-full pt-2 opacity-0 translate-y-2 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
+                <div className="glass-strong rounded-xl p-2 min-w-[200px] border border-border/50 shadow-2xl">
+                  {SECTIONS.filter(s => ["events", "donations", "faq", "contact"].includes(s.id) && isVisible(s.id)).map((s) => (
+                    <button
+                      key={s.id}
+                      onClick={() => go(s.id)}
+                      className={cn(
+                        "block w-full rounded-lg px-4 py-2 text-left text-sm transition-colors",
+                        section === s.id ? "bg-gold/10 text-gold" : "text-ivory/70 hover:bg-white/5 hover:text-ivory"
+                      )}
+                    >
+                      {c.nav[s.label]}
+                    </button>
+                  ))}
                 </div>
               </div>
-            )}
+            </div>
           </nav>
 
           {/* Right actions */}
           <div className="flex items-center gap-1.5 sm:gap-3">
-            {/* Language toggle */}
-            <button
-              onClick={toggleLang}
-              data-cursor="hover"
-              className="group flex items-center gap-1.5 rounded-full border border-border px-2.5 py-1.5 text-xs font-medium text-ivory/80 hover:border-gold/40 hover:text-gold transition-colors drop-shadow-md bg-black/20 sm:gap-2 sm:px-3"
-            >
-              <Globe className="h-3.5 w-3.5" />
-              <span className="uppercase tracking-wider">{lang}</span>
-              <span className="hidden text-muted-foreground sm:inline">/</span>
-              <span className="hidden text-muted-foreground uppercase tracking-wider sm:inline">
-                {lang === "fr" ? "EN" : "FR"}
-              </span>
-            </button>
-
-            {/* CTA */}
-            <button
-              onClick={() => go("contact")}
-              data-cursor="hover"
-              className="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold to-copper px-5 py-2 text-sm font-medium text-obsidian transition-all hover:from-gold-bright hover:to-copper-light hover:shadow-[0_8px_20px_-8px_rgba(212,165,71,0.6)]"
-            >
-              {c.nav.cta}
-              <ArrowUpRight className="h-3.5 w-3.5" />
-            </button>
+            
+            {/* CTA (Appears on scroll) */}
+            <div className={cn(
+              "hidden md:flex overflow-hidden transition-all duration-500 items-center",
+              scrolled ? "max-w-[250px] opacity-100 ml-2" : "max-w-0 opacity-0 ml-0 pointer-events-none"
+            )}>
+              <button
+                onClick={() => go("contact")}
+                data-cursor="hover"
+                className="whitespace-nowrap inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold to-copper px-5 py-2 text-sm font-medium text-obsidian transition-all hover:from-gold-bright hover:to-copper-light hover:shadow-[0_8px_20px_-8px_rgba(212,165,71,0.6)]"
+              >
+                {c.nav.cta}
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </button>
+            </div>
 
             {/* Mobile menu trigger */}
             <button

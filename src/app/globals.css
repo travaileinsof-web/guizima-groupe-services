@@ -63,59 +63,59 @@
 
 /* ============================================
   GUIZIMA GROUP SERVICES — Premium Palette
-  Midnight blue + signal red + white
+  Obsidian + Charcoal + Gold + Copper + Emerald + Ivory
   ============================================ */
 :root {
   --radius: 0.5rem;
 
   /* Brand colors */
-  --obsidian: #071426;
-  --coal: #0d2340;
-  --graphite: #183352;
-  --gold: #e3293f;
-  --gold-bright: #ff5364;
-  --gold-light: #ff9ba6;
-  --copper: #b91630;
-  --copper-light: #e33e50;
-  --emerald-deep: #073a72;
-  --emerald: #0b62b5;
-  --emerald-light: #4a9be2;
-  --ivory: #ffffff;
-  --bone: #e9f1f8;
-  --cream: #f4f8fc;
+  --obsidian: #0a0a0b;
+  --coal: #14141a;
+  --graphite: #1a1a24;
+  --gold: #d4a547;
+  --gold-bright: #e5b95c;
+  --gold-light: #f5dc99;
+  --copper: #b8612c;
+  --copper-light: #d1753d;
+  --emerald-deep: #1e5641;
+  --emerald: #2d7a5f;
+  --emerald-light: #46a282;
+  --ivory: #faf7f0;
+  --bone: #f2efe6;
+  --cream: #eae5d8;
 
   /* Shadcn semantic — DARK theme by default */
-  --background: #071426;
-  --foreground: #ffffff;
-  --card: #0d2340;
-  --card-foreground: #ffffff;
-  --popover: #0d2340;
-  --popover-foreground: #ffffff;
-  --primary: #e3293f;
-  --primary-foreground: #ffffff;
-  --secondary: #183352;
-  --secondary-foreground: #ffffff;
-  --muted: #183352;
-  --muted-foreground: #a9bfd4;
-  --accent: #0b62b5;
+  --background: #0a0a0b;
+  --foreground: #faf7f0;
+  --card: #14141a;
+  --card-foreground: #faf7f0;
+  --popover: #14141a;
+  --popover-foreground: #faf7f0;
+  --primary: #d4a547;
+  --primary-foreground: #0a0a0b;
+  --secondary: #14141a;
+  --secondary-foreground: #faf7f0;
+  --muted: #1a1a24;
+  --muted-foreground: #a3a3a8;
+  --accent: #b8612c;
   --accent-foreground: #ffffff;
-  --destructive: #ff5364;
-  --border: #234668;
-  --input: #234668;
-  --ring: #e3293f;
-  --chart-1: #e3293f;
-  --chart-2: #0b62b5;
-  --chart-3: #ff5364;
-  --chart-4: #4a9be2;
-  --chart-5: #a9bfd4;
-  --sidebar: #071426;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #e3293f;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #183352;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #234668;
-  --sidebar-ring: #e3293f;
+  --destructive: #b8612c;
+  --border: #2a2a35;
+  --input: #2a2a35;
+  --ring: #d4a547;
+  --chart-1: #d4a547;
+  --chart-2: #2d7a5f;
+  --chart-3: #b8612c;
+  --chart-4: #46a282;
+  --chart-5: #a3a3a8;
+  --sidebar: #0a0a0b;
+  --sidebar-foreground: #faf7f0;
+  --sidebar-primary: #d4a547;
+  --sidebar-primary-foreground: #0a0a0b;
+  --sidebar-accent: #14141a;
+  --sidebar-accent-foreground: #faf7f0;
+  --sidebar-border: #2a2a35;
+  --sidebar-ring: #d4a547;
 }
 
 @layer base {

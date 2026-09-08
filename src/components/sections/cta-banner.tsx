@@ -42,13 +42,13 @@ export function CtaBanner() {
  <h2 className="font-display text-4xl font-bold leading-tight text-ivory md:text-5xl lg:text-6xl">
  {lang === "fr" ? (
  <>
- Donnez à vos projets l'élan qu'ils méritent{" "}
- <span className="text-gradient-gold">avec Guizima</span>
+ Vous avez un besoin.{" "}
+ <span className="text-gradient-gold">Construisons la solution.</span>
  </>
  ) : (
  <>
- Give your projects the momentum they need{" "}
- <span className="text-gradient-gold">with Guizima</span>
+ You have a need.{" "}
+ <span className="text-gradient-gold">Let's build the solution.</span>
  </>
  )}
  </h2>
@@ -56,8 +56,8 @@ export function CtaBanner() {
  <Reveal delay={0.2}>
  <p className="mx-auto mt-6 max-w-2xl text-base text-ivory/80 md:text-lg">
  {lang === "fr"
- ? "Du besoin initial à la réalisation, notre équipe vous accompagne avec méthode, réactivité et engagement."
- : "From the first need to delivery, our team supports you with method, responsiveness and commitment."}
+ ? "Notre équipe vous répond sous 48 heures avec une proposition adaptée à vos besoins."
+ : "Our team responds within 48 hours with a proposal tailored to your needs."}
  </p>
  </Reveal>
  <Reveal delay={0.3}>

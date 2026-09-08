@@ -68,19 +68,40 @@ export default function Home() {
       <main key={section} className="min-h-screen page-enter">
           {section === "home" && (
             <>
+              {/* 1. Hero */}
               <Hero />
-              {isVisible("partners") && <Partners />}
-              <About />
-              <Services />
+              
+              {/* 2. Chiffres clés */}
               <Stats />
+              
+              {/* 3. Qui sommes-nous ? */}
+              <About />
+              
+              {/* 4. Nos activités */}
+              <Services />
+              
+              {/* 5. Nos solutions */}
               {isVisible("products") && <Products onSelectProduct={setSelectedProduct} />}
+              
+              {/* 6. Nos réalisations */}
               {isVisible("projects") && <Projects />}
-              <Testimonials />
-              {isVisible("team") && <Team />}
+              
+              {/* 7. Actualités */}
               {isVisible("blog") && <Blog />}
-              {isVisible("events") && <Events />}
+              
+              {/* 8. Engagement */}
+              {isVisible("donations") && <Donations />}
+              
+              {/* 9. Partenaires */}
+              {isVisible("partners") && <Partners />}
+              
+              {/* 10. CTA Final */}
               <CtaBanner />
+              
+              {/* 11. FAQ */}
               {isVisible("faq") && <FAQ />}
+              
+              {/* 12. Contact / Présence */}
               <Contact />
             </>
           )}

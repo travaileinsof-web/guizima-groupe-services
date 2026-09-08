@@ -38,13 +38,13 @@ export const content = {
     },
     hero: {
       badge: "GUIZIMA GROUP SERVICES / GUINÉE",
-      title1: "Une force,",
-      title2: "plusieurs métiers.",
-      title3: "Un même niveau d'exigence.",
+      title1: "Construire.",
+      title2: "Approvisionner. Transporter.",
+      title3: "Développer.",
       subtitle:
-        "Du commerce général aux travaux publics, Guizima Group Services met en mouvement les projets qui font avancer la Guinée.",
-      primaryCta: "Explorer nos domaines",
-      secondaryCta: "Voir nos réalisations",
+        "Guizima accompagne les entreprises, institutions et communautés avec des solutions fiables. Notre mission : transformer vos besoins en valeur pour la Guinée.",
+      primaryCta: "Découvrir nos activités",
+      secondaryCta: "Demander un devis",
       stats: [
         { value: 8, suffix: "", label: "Domaines d'activité" },
         { value: 1, suffix: "", label: "Groupe intégré" },
@@ -244,15 +244,89 @@ export const content = {
       ],
     },
     careers: {
-      tag: "Recrutement",
-      title: "Rejoignez l'aventure Guizima",
-      subtitle: "Nous recrutons des talents désireux de contribuer à des projets miniers innovants dans un environnement fondé sur l'excellence, la sécurité et l'intégrité.",
-      openings: [
-        { title: "Ingénieur Minier Senior", location: "Conakry, Guinée", type: "CDI", dept: "Ingénierie" },
-        { title: "Spécialiste HSE", location: "Site Boké", type: "CDI", dept: "HSE" },
-        { title: "Formateur Technique", location: "Conakry, Guinée", type: "CDD", dept: "Formation" },
-        { title: "Responsable Logistique", location: "Conakry, Guinée", type: "CDI", dept: "Logistique" },
+      tag: "Carrières",
+      hero: {
+        title: "Construisez votre avenir avec Guizima.",
+        subtitle: "Nous réunissons des talents, des expertises et des ambitions pour construire des solutions qui créent de la valeur en Guinée.",
+        ctaMain: "Voir les opportunités",
+        ctaSecondary: "Découvrir notre culture",
+      },
+      intro: {
+        tag: "Pourquoi Guizima",
+        title: "Plus qu'un emploi, une possibilité de construire.",
+        text: "Guizima évolue dans 8 secteurs stratégiques et offre à ses collaborateurs la possibilité de développer leurs compétences dans un environnement dynamique, exigeant et tourné vers l'impact local.",
+      },
+      benefits: [
+        { title: "Grandir avec le groupe", desc: "Développement professionnel, apprentissage et évolution." },
+        { title: "Travailler sur des projets concrets", desc: "Participer à des activités ayant un impact économique réel." },
+        { title: "Évoluer dans plusieurs secteurs", desc: "Commerce, logistique, construction, immobilier, agriculture, services." },
+        { title: "Contribuer au développement local", desc: "Travailler sur des initiatives créant de la valeur en Guinée." },
       ],
+      departments: {
+        tag: "Nos Domaines de Métiers",
+        title: "Des carrières au cœur de l'économie",
+        items: [
+          { title: "Opérations & Logistique", roles: ["Transport", "Supply Chain", "Approvisionnement", "Gestion opérationnelle"] },
+          { title: "Commerce & Développement", roles: ["Commercial", "Business Development", "Import-export", "Achats"] },
+          { title: "Construction & Immobilier", roles: ["Ingénierie", "Travaux", "Gestion de projets", "Immobilier"] },
+          { title: "Agriculture & Élevage", roles: ["Production", "Gestion d'exploitation", "Opérations agricoles"] },
+          { title: "Fonctions Support", roles: ["Finance", "Ressources humaines", "Juridique", "Communication"] },
+        ]
+      },
+      search: {
+        tag: "Opportunités",
+        title: "Trouvez votre prochaine opportunité.",
+        subtitle: "Explorez les postes actuellement ouverts au sein de Guizima Group Services.",
+        placeholder: "Rechercher un poste...",
+        allDepts: "Tous les départements",
+        allLocs: "Toutes les localisations",
+        allTypes: "Tous les contrats",
+        empty: "Aucune opportunité actuellement disponible.",
+        noResults: "Aucun poste ne correspond à votre recherche.",
+        reset: "Réinitialiser les filtres",
+        viewJob: "Voir l'offre",
+      },
+      culture: {
+        title: "Une culture fondée sur nos valeurs.",
+        items: [
+          { title: "Fiabilité", desc: "Nous faisons de la confiance une exigence quotidienne." },
+          { title: "Agilité", desc: "Nous adaptons nos méthodes aux réalités du terrain." },
+          { title: "Intégrité", desc: "Nous construisons nos relations sur la transparence et le respect." },
+          { title: "Impact local", desc: "Nous contribuons au développement des territoires où nous opérons." },
+        ]
+      },
+      process: {
+        title: "Notre Processus de Recrutement",
+        items: [
+          { step: "01", title: "Candidature", desc: "Vous envoyez votre candidature via une offre ou spontanément." },
+          { step: "02", title: "Présélection", desc: "Notre équipe étudie votre profil." },
+          { step: "03", title: "Entretien", desc: "Les candidats retenus échangent avec l'équipe concernée." },
+          { step: "04", title: "Évaluation", desc: "Selon le poste, une évaluation technique ou métier peut être organisée." },
+          { step: "05", title: "Intégration", desc: "Les candidats sélectionnés rejoignent leur équipe." },
+        ]
+      },
+      spontaneous: {
+        tag: "Candidature Spontanée",
+        title: "Vous ne trouvez pas encore le poste qui vous correspond ?",
+        text: "Nous sommes toujours ouverts aux profils capables d'apporter leur expertise, leur énergie et leur vision aux projets de Guizima.",
+        cta: "Envoyer une candidature spontanée",
+      },
+      faq: {
+        tag: "FAQ Candidats",
+        title: "Des questions sur le recrutement ?",
+        items: [
+          { q: "Comment postuler ?", a: "Vous pouvez postuler directement en ligne sur la fiche du poste qui vous intéresse, en remplissant le formulaire et en joignant votre CV." },
+          { q: "Puis-je envoyer une candidature spontanée ?", a: "Oui, la section dédiée en bas de page vous permet de nous envoyer votre profil pour nos futures opportunités." },
+          { q: "Quels documents dois-je fournir ?", a: "Un CV à jour est obligatoire. Une lettre de motivation est fortement recommandée pour nous permettre de mieux comprendre votre projet." },
+          { q: "Les stages sont-ils proposés ?", a: "Oui, nous proposons régulièrement des stages de découverte et de pré-emploi dans nos différents départements." },
+        ]
+      },
+      ctaFinal: {
+        title: "Votre prochaine aventure professionnelle commence ici.",
+        subtitle: "Rejoignez une équipe engagée pour le développement de la Guinée.",
+        btn1: "Voir les opportunités",
+        btn2: "Candidature spontanée",
+      }
     },
     donations: {
       tag: "Dons & Soutien",
